@@ -6,4 +6,56 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
+.displayflex{
+    display: flex;
+}
 
+.container{
+    width: 100%;
+    flex-direction: column;
+}
+
+/************************** MAIN *************************/
+
+.main{
+    flex-direction: column;
+    width: 100%;
+    background-color: #2A4150;
+}
+
+.title{
+    justify-content: center;
+    align-items: center;
+    background-color: #2E323C;
+    width: 100%;
+    padding: 12px;
+}
+
+.title-h1{
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.nav{
+    flex-direction: row;
+    width: 100%;
+}
+
+ul{
+    justify-content: center;
+    align-items: center;
+    background-color: #2E323C;
+    padding: 8px;
+    list-style: none;
+}
+
+li{
+    padding: 10px;
+    color: white;
+}
+
+.central-panel{
+    width: 100%;
+    
+}
