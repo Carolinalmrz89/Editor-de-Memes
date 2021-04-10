@@ -104,11 +104,6 @@ li{
     font-weight: 800;
 }
 
-aside{
-    width:25% ;
-    background-color:#2A4150 ;
-}
-
 .download{
     margin-top: 15px;
     background-color: rgb(43, 156, 43);
@@ -116,6 +111,38 @@ aside{
     color: white;
     font-size: 18px;
 }
+
+aside{
+    width:25% ;
+    background-color:#2A4150 ;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.title-img{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h3{
+    color: white;
+    padding-top: 25px;
+}
+
+h5{
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+input{
+    background-color: #5B7D86;
+}
+
+
+
+
 
 
 
