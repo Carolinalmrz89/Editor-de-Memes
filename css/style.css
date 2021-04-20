@@ -20,7 +20,7 @@
 .main{
     flex-direction: column;
     width:100%;
-    background-color: #2A4150;
+    background-color: #2E323C;
 }
 
 .title{
@@ -57,7 +57,7 @@ li{
 
 .central-panel{
     width:100%;
-    background-color:#5B7D86 ;
+    background-color:#5B7D86;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,7 +113,7 @@ li{
 }
 
 aside{
-    width:25% ;
+    width:22% ;
     background-color:#2A4150 ;
     flex-direction: column;
     padding: 10px;
@@ -125,20 +125,85 @@ aside{
     
 }
 
+.url-img{
+    flex-direction: column;
+}
+
 h3{
     color: white;
     padding-top: 25px;
 }
 
-h5{
+label{
     color: white;
     margin-bottom: 8px;
     margin-top: 20px;
+    font-size: 12px;
 }
 
 input{
     background-color: #5B7D86;
+    height: 25px;
+    border-radius: 5px;
 }
+
+.fondo-img{
+    flex-direction: column;
+}
+
+.color-list{
+    justify-content: space-between;
+}
+
+.color{
+    background-color:#5B7D86 ;
+    align-items: center;
+    color: white;
+    width: 45%;
+    border-radius: 5px;
+}
+
+.color-text{
+    font-size: 14px;
+}
+
+#fondo{
+    width: 45%;
+    background-color:#5B7D86 ;
+    color: white;
+    border-radius: 5px;
+}
+
+.filtros-img{
+    flex-direction: column;
+}
+
+.filtros{
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.reestablecer{
+    width: 70%;
+    background-color:#5B7D86;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 40px;
+}
+
+input[type='range'] {
+    background-color:#5B7D86;
+    appearance: none;
+    height: 6px;
+}
+
+
 
 
 
