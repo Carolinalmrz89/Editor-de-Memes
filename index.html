@@ -52,10 +52,15 @@
        
       </main>
 
+
+      <!------------------ ASIDE ------------------>
+
       <aside class="displayflex">
         <!-----------BOTON PARA MOBILE
         <button><i class="fas fa-times"></i></button>
         -->
+
+        <!------------------ PANEL IMAGEN ------------------>
         <section id="img-panel">
             <div class="title-img displayflex">
                 <h2>IMAGEN</h2>
@@ -63,17 +68,17 @@
 
             <div class="url-img displayflex">
                 <h3>URL</h3>               
-                <input type="url" class="">
+                <input type="url" class="control-text">
             </div> 
  
-            <div class="fondo-img displayflex">
+            <div class="fondo-img displayflex column">
                 <h3>FONDO</h3>
                 <div class="color-list displayflex">
                     <div class="color displayflex">
-                        <input type="color" value="#FFFFFF"> 
+                        <input type="color" value="#FFFFFF" class="control-text"> 
                         <span class="color-text">#FFFFFF</span>
                     </div>
-                    <select name="fondo" id="fondo">
+                    <select name="fondo" id="fondo" class="control-text">
                         <option value="">Ninguno</option>
                         <option value="">Aclarar</option>
                         <option value="">Oscurecer</option>
@@ -83,7 +88,7 @@
                     </select>
                 </div>
             </div>
-
+            
             <div class="filtros-img displayflex">
                 <h3>FILTROS</h3>
                 <div class="brillo displayflex filtros">
@@ -126,7 +131,9 @@
             </div>
         </section>
 
-        <section class="text-panel displayflex column">
+        <!------------------ PANEL TEXTO ------------------>
+
+        <section class="text-panel displayflex column" id="texto-panel">
             <div class="title-text displayflex">
                 <h2>TEXTO</h2>
             </div>
@@ -172,6 +179,39 @@
                     </div>
                 </div>
             </div>
+
+            <div class="fondo-texto displayflex column">
+                <div class="displayflex color-fondo-texto">
+                    <div class="color-list displayflex column">
+                        <h3>COLOR</h3>
+                        <div class="color-input-texto displayflex">
+                            <input type="color" value="#000000"> 
+                            <span class="color-text">#000000</span>
+                        </div>
+                    </div>
+                    <div class="color-list displayflex column">
+                        <h3>FONDO</h3>
+                        <div class="color-input-texto displayflex">
+                            <input type="color" value="#FFFFFF"> 
+                            <span class="color-text">#FFFFFF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="displayflex fondo-transparente">
+                    <input type="checkbox" name="fondo transparente" id="">
+                    <label for="fondo-transparente">Fondo transparente</label>
+                </div>
+            </div>
+
+            <div class="contorno-texto displayflex column">
+                <h3>CONTORNO</h3>
+                <div class="boton-contorno displayflex">
+                    <button class="control-text botones-contorno">Ninguno</button>
+                    <button class="control-text botones-contorno">Claro</button>
+                    <button class="control-text botones-contorno">Oscuro</button>
+                </div>
+            </div>
+            
 
         </section>
 

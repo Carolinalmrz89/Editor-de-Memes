@@ -26,10 +26,10 @@
     flex-direction: row;
 }
 
-#img-panel{
+#texto-panel{
     display: none;
 }
-/************************** MAIN *************************/
+/************** MAIN ****************/
 
 .main{
     flex-direction: column;
@@ -126,12 +126,17 @@ li{
     font-size: 18px;
 }
 
+
+/*************ASIDE*************/
+
 aside{
     width:22% ;
     background-color:#2A4150 ;
     flex-direction: column;
     padding: 10px;
 }
+
+/************PANEL IMAGEN************/
 
 .title-img{
     justify-content: center;
@@ -164,12 +169,13 @@ input{
 label{
     color: white;
     font-size: 12px;
+    margin-top: 10px;
 }
-
+/*
 .fondo-img{
     flex-direction: column;
 }
-
+*/
 .color-list{
     justify-content: space-between;
 }
@@ -184,6 +190,7 @@ label{
 
 .color-text{
     font-size: 14px;
+    padding-right: 5px;
 }
 
 #fondo{
@@ -220,7 +227,9 @@ input[type='range'] {
     background-color:#5B7D86;
     appearance: none;
     height: 6px;
+    margin-top: 12px;
 }
+
 
 /*******PANEL TEXTO*******/
 /*
@@ -271,6 +280,45 @@ input[type='range'] {
 .boton-size{
     width: 33px;
 }
+
+.color-input-texto{
+    background-color:#5B7D86 ;
+    align-items: center;
+    color: white;
+    width: 100%;
+    border-radius: 3px;
+    height: 36px;
+}
+
+.fondo-texto{
+    justify-content: space-between;
+}
+
+.color-fondo-texto{
+    justify-content: space-between;
+}
+
+.fondo-transparente{
+    align-items: center;
+}
+
+input[type='checkbox']{
+    margin-right: 5px;
+    margin-top: 8px;
+}
+
+.boton-contorno{
+    justify-content: space-between;
+}
+
+.botones-contorno{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
 
 
 
