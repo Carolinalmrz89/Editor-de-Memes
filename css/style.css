@@ -21,7 +21,7 @@
     display: flex;
 }
 
-.container{
+#container{
     width: 100%;
     flex-direction: row;
 }
@@ -29,10 +29,12 @@
 .ocultar-panel{
     display: none;
 }
-/*
-#texto-panel{
-    display: none;
-}*/
+
+button{
+    cursor: pointer;
+}
+
+
 /************** MAIN ****************/
 
 .main{
@@ -41,7 +43,7 @@
     background-color: #2E323C;
 }
 
-.title{
+.title-container{
     justify-content: center;
     align-items: center;
     background-color: #2E323C;
@@ -49,7 +51,7 @@
     padding: 12px;
 }
 
-.title-h1{
+.title{
     color: white;
     font-size: 36px;
     font-weight: 500;
@@ -71,6 +73,13 @@ ul{
 li{
     padding: 10px;
     color: white;
+}
+
+.btn-nav{
+    background-color: #2E323C;
+    border: none;
+    color: white;
+    font-size: 14px;
 }
 
 .central-panel{
@@ -133,26 +142,28 @@ li{
 
 /*************ASIDE*************/
 
+
 aside{
-    width:22% ;
+    width:22%;
     background-color:#2A4150 ;
     flex-direction: column;
     padding: 10px;
+    color: white;
 }
 
-#boton-salir{
+#btn-salir{
     background-color: #2A4150;
     width: 15%;
     color: white;
     border: none;
+    display: none;
 }
 
 /************PANEL IMAGEN************/
 
 .title-img{
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .url-img{
@@ -160,12 +171,10 @@ aside{
 }
 
 h2{
-    color: white;
     padding-top: 25px;
 }
 
 h3{
-    color: white;
     margin-bottom: 8px;
     margin-top: 20px;
     font-size: 12px;
@@ -178,7 +187,6 @@ input{
 }
 
 label{
-    color: white;
     font-size: 12px;
     margin-top: 10px;
 }
@@ -194,7 +202,6 @@ label{
 .color{
     background-color:#5B7D86 ;
     align-items: center;
-    color: white;
     width: 45%;
     border-radius: 5px;
 }
@@ -207,7 +214,6 @@ label{
 #fondo{
     width: 45%;
     background-color:#5B7D86 ;
-    color: white;
     border-radius: 5px;
 }
 
@@ -219,19 +225,14 @@ label{
     flex-direction: column;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
-
 .reestablecer{
     width: 70%;
     background-color:#5B7D86;
     font-size: 14px;
     padding: 8px;
     border-radius: 5px;
-    color: white;
     margin-top: 40px;
+    color: white;
 }
 
 input[type='range'] {
@@ -267,8 +268,8 @@ input[type='range'] {
 .control-text{
     height: 36px;
     background-color: #5B7D86;
-    color: white;
     border-radius: 3px;
+    color: white;
 }
 
 .column{
@@ -295,7 +296,6 @@ input[type='range'] {
 .color-input-texto{
     background-color:#5B7D86 ;
     align-items: center;
-    color: white;
     width: 100%;
     border-radius: 3px;
     height: 36px;
@@ -327,6 +327,15 @@ input[type='checkbox']{
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+
+
+/*Cambio de colores en ccs
+.claro.main, .claro aside, .claro.algo, .claro.control-text{
+background-color:
+color:
+}*/
 
 
 

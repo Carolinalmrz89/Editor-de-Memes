@@ -1,225 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Editor de memes</title>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/fc93a7f461.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="container displayflex">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/fc93a7f461.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="container" class="displayflex">
       <div class="main displayflex">
+
+        <!----------------------- HEADER ---------------------->
+
         <header class="header-container column displayflex">
-            <div class="title displayflex">
-                <h1 class="title-h1">Generador de Memes</h1>
+          <div class="title-container displayflex">
+            <h1 class="title">Generador de Memes</h1>
+          </div>
+          <nav>
+            <div class="nav">
+              <ul class="displayflex">
+                <li>
+                  <button class="btn-nav" id="boton-img">
+                    <i class="far fa-file-image"></i> Imagen
+                  </button>
+                </li>
+                <li>
+                  <button class="btn-nav" id="boton-texto">
+                    <i class="fas fa-font"></i> Texto
+                  </button>
+                </li>
+                <li>
+                  <button class="btn-nav" id="boton-modo">
+                    <i class="far fa-lightbulb"></i> Modo oscuro
+                  </button>
+                </li>
+              </ul>
             </div>
-            <nav> 
-                <div class="nav">
-                   <ul class="displayflex">
-                       <li>
-                            <button class="control-text" id="boton-img"><i class="far fa-file-image"></i> Imagen </button>
-                       </li>
-                       <li>
-                            <button class="control-text" id="boton-texto"><i class="fas fa-font"></i> Texto </button>
-                       </li>
-                       <li>
-                            <a href="" id="boton-modo"><i class="far fa-lightbulb"></i> Modo oscuro </a>
-                       </li>
-                   </ul>
-                </div>
-            </nav>
+          </nav>
         </header>
 
+        <!----------------------- MAIN ---------------------->
+
         <main class="central-panel">
-            <div class="generator displayflex">
-                <div class="header-generator displayflex">
-                    <h1 class="title-top">TOP TEXT</h1>
-                </div>
-                <div class="main-generator">
-                </div>
-                <div class="footer-generator displayflex"> 
-                    <h1 class="title-bottom">BOTTOM TEXT</h1>
-                </div>
+          <div class="generator displayflex">
+            <div class="header-generator displayflex">
+              <h1 class="title-top">TOP TEXT</h1>
             </div>
-            <div class="btn-download-container">
-                <button class="btn-download"><i class="fas fa-download"></i> Descargar meme </button>
+            <div class="main-generator"></div>
+            <div class="footer-generator displayflex">
+              <h1 class="title-bottom">BOTTOM TEXT</h1>
             </div>
+          </div>
+          <div class="btn-download-container">
+            <button class="btn-download">
+              <i class="fas fa-download"></i> Descargar meme
+            </button>
+          </div>
         </main>
-
-       
-    </div>
+      </div>
 
 
-      <!------------------ ASIDE ------------------>
+      <!----------------------- ASIDE ---------------------->
 
       <aside id="paneles" class="displayflex">
-        <!-----------BOTON PARA MOBILE 
-        <button id="boton-salir"><i class="fas fa-times"></i></button>
-        -->
+
+        <!---------------BOTON PARA MOBILE ----------------->
+        <button id="btn-salir"><i class="fas fa-times"></i></button>
 
         <!------------------ PANEL IMAGEN ------------------>
         <section id="img-panel">
-            <div class="title-img displayflex">
-                <h2>IMAGEN</h2>
-            </div>
+          <div class="title-img displayflex">
+            <h2>IMAGEN</h2>
+          </div>
 
-            <div class="url-img displayflex">
-                <h3>URL</h3>               
-                <input type="url" class="control-text">
-            </div> 
- 
-            <div class="fondo-img displayflex column">
-                <h3>FONDO</h3>
-                <div class="color-list displayflex">
-                    <div class="color displayflex">
-                        <input type="color" value="#FFFFFF" class="control-text"> 
-                        <span class="color-text">#FFFFFF</span>
-                    </div>
-                    <select name="fondo" id="fondo" class="control-text">
-                        <option value="">Ninguno</option>
-                        <option value="">Aclarar</option>
-                        <option value="">Oscurecer</option>
-                        <option value="">Diferencia</option>
-                        <option value="">Luminosidad</option>
-                        <option value="">Multiplicar</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="filtros-img displayflex">
-                <h3>FILTROS</h3>
-                <div class="brillo displayflex filtros">
-                    <label for="brillo">BRILLO</label>
-                    <input type="range" name="brillo" id="">
-                </div>
-                <div class="opacidad displayflex filtros">
-                    <label for="brillo">OPACIDAD</label>
-                    <input type="range" name="opacidad" id="">
-                </div>
-                <div class="contraste displayflex filtros">
-                    <label for="brillo">CONTRASTE</label>
-                    <input type="range" name="contraste" id="">
-                </div>
-                <div class="desenfoque displayflex filtros">
-                    <label for="desenfoque">DESENFOQUE</label>
-                    <input type="range" name="desenfoque" id="">
-                </div>
-                <div class="escala displayflex filtros">
-                    <label for="escala">ESCALA DE GRISES</label>
-                    <input type="range" name="escala" id="">
-                </div>
-                <div class="sepia displayflex filtros">
-                    <label for="sepia">SEPIA</label>
-                    <input type="range" name="sepia" id="">
-                </div>
-                <div class="hue displayflex filtros">
-                    <label for="hue">HUE</label>
-                    <input type="range" name="hue" id="">
-                </div>
-                <div class="saturado displayflex filtros">
-                    <label for="saturado">SATURADO</label>
-                    <input type="range" name="saturado" id="">
-                </div>
-                <div class="negativo displayflex filtros">
-                    <label for="negativo">NEGATIVO</label>
-                    <input type="range" name="negativo" id="">
-                </div>
+          <div class="url-img displayflex">
+            <h3>URL</h3>
+            <input type="url" class="control-text" />
+          </div>
 
+          <div class="fondo-img displayflex column">
+            <h3>FONDO</h3>
+            <div class="color-list displayflex">
+              <div class="color displayflex">
+                <input type="color" value="#FFFFFF" class="control-text" />
+                <span class="color-text">#FFFFFF</span>
+              </div>
+              <select name="fondo" id="fondo" class="control-text">
+                <option value="">Ninguno</option>
+                <option value="">Aclarar</option>
+                <option value="">Oscurecer</option>
+                <option value="">Diferencia</option>
+                <option value="">Luminosidad</option>
+                <option value="">Multiplicar</option>
+              </select>
             </div>
+          </div>
+
+          <div class="filtros-img displayflex">
+            <h3>FILTROS</h3>
+            <div class="brillo displayflex filtros">
+              <label for="brillo">BRILLO</label>
+              <input type="range" name="brillo" id="" />
+            </div>
+            <div class="opacidad displayflex filtros">
+              <label for="brillo">OPACIDAD</label>
+              <input type="range" name="opacidad" id="" />
+            </div>
+            <div class="contraste displayflex filtros">
+              <label for="brillo">CONTRASTE</label>
+              <input type="range" name="contraste" id="" />
+            </div>
+            <div class="desenfoque displayflex filtros">
+              <label for="desenfoque">DESENFOQUE</label>
+              <input type="range" name="desenfoque" id="" />
+            </div>
+            <div class="escala displayflex filtros">
+              <label for="escala">ESCALA DE GRISES</label>
+              <input type="range" name="escala" id="" />
+            </div>
+            <div class="sepia displayflex filtros">
+              <label for="sepia">SEPIA</label>
+              <input type="range" name="sepia" id="" />
+            </div>
+            <div class="hue displayflex filtros">
+              <label for="hue">HUE</label>
+              <input type="range" name="hue" id="" />
+            </div>
+            <div class="saturado displayflex filtros">
+              <label for="saturado">SATURADO</label>
+              <input type="range" name="saturado" id="" />
+            </div>
+            <div class="negativo displayflex filtros">
+              <label for="negativo">NEGATIVO</label>
+              <input type="range" name="negativo" id="" />
+            </div>
+          </div>
+          <div class="btn-reestablecer-aside">
+            <button class="reestablecer">Reestablecer filtros</button>
+          </div>
         </section>
 
         <!------------------ PANEL TEXTO ------------------>
 
-        <section class="text-panel displayflex column ocultar-panel" id="texto-panel">
-            <div class="title-text displayflex">
-                <h2>TEXTO</h2>
-            </div>
+        <section
+          class="text-panel displayflex column ocultar-panel"
+          id="texto-panel"
+        >
+          <div class="title-text displayflex">
+            <h2>TEXTO</h2>
+          </div>
 
-            <div class="superior-text displayflex column">
-                <h3>SUPERIOR</h3>
-                <textarea class="control-text" name="superior" id="">TOP TEXT</textarea>
-            </div>
-            <div class="sin-texto-superior displayflex">
-                <input type="checkbox" name="superior" id="textoSuperior"> 
-                <label for="">Sin texto superior</label>
-            </div>
+          <div class="superior-text displayflex column">
+            <h3>SUPERIOR</h3>
+            <textarea class="control-text" name="superior" id="">
+TOP TEXT</textarea
+            >
+          </div>
+          <div class="sin-texto-superior displayflex">
+            <input type="checkbox" name="superior" id="textoSuperior" />
+            <label for="">Sin texto superior</label>
+          </div>
 
-            <div class="inferior-text displayflex column">
-                <h3>INFERIOR</h3>
-                <textarea class="control-text" name="inferior" id="">BOTTOM TEXT</textarea>
-            </div>
-            <div class="sin-texto-inferior displayflex">
-                <input type="checkbox" name="inferior" id="textoInferior"> 
-                <label for="">Sin texto inferior</label>
-            </div>
+          <div class="inferior-text displayflex column">
+            <h3>INFERIOR</h3>
+            <textarea class="control-text" name="inferior" id="">
+BOTTOM TEXT</textarea
+            >
+          </div>
+          <div class="sin-texto-inferior displayflex">
+            <input type="checkbox" name="inferior" id="textoInferior" />
+            <label for="">Sin texto inferior</label>
+          </div>
 
-            <div class="fuente-texto displayflex column">
-                <h3>FUENTE</h3>
-                <select class="control-text" name="fuentes" id="">
-                    <option value="roboto">Roboto</option>
-                    <option value="open sans">Open Sans</option>
-                    <option value="montserrat">Montserrat</option>
-                    <option value="oswald">Oswald</option>
-                    <option value="rubik">Rubik</option>
-                    <option value="mukta">Mukta</option>
-                    <option value="inter">Inter</option>
-                    <option value="source code pro">Source Code Pro</option>
-                </select>
-                <div class="estilos-fuente displayflex">
-                    <div class="font-size">
-                        <input class="control-text tamanio-fuente" type="number" name="tamanio" id="tamanio-fuente" min="12" value="40">
-                    </div>
-                    <div class="font-size">
-                        <button class="control-text boton-size"><i class="fas fa-align-left"></i></button>
-                        <button class="control-text boton-size"><i class="fas fa-align-center"></i></button>
-                        <button class="control-text boton-size"><i class="fas fa-align-right"></i></button>
-                    </div>
+          <div class="fuente-texto displayflex column">
+            <h3>FUENTE</h3>
+            <select class="control-text" name="fuentes" id="">
+              <option value="roboto">Roboto</option>
+              <option value="open sans">Open Sans</option>
+              <option value="montserrat">Montserrat</option>
+              <option value="oswald">Oswald</option>
+              <option value="rubik">Rubik</option>
+              <option value="mukta">Mukta</option>
+              <option value="inter">Inter</option>
+              <option value="source code pro">Source Code Pro</option>
+            </select>
+            <div class="estilos-fuente displayflex">
+              <div class="font-size">
+                <input
+                  class="control-text tamanio-fuente"
+                  type="number"
+                  name="tamanio"
+                  id="tamanio-fuente"
+                  min="12"
+                  value="40"
+                />
+              </div>
+              <div class="font-size">
+                <button class="control-text boton-size">
+                  <i class="fas fa-align-left"></i>
+                </button>
+                <button class="control-text boton-size">
+                  <i class="fas fa-align-center"></i>
+                </button>
+                <button class="control-text boton-size">
+                  <i class="fas fa-align-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="fondo-texto displayflex column">
+            <div class="displayflex color-fondo-texto">
+              <div class="color-list displayflex column">
+                <h3>COLOR</h3>
+                <div class="color-input-texto displayflex">
+                  <input type="color" value="#000000" />
+                  <span class="color-text">#000000</span>
                 </div>
-            </div>
-
-            <div class="fondo-texto displayflex column">
-                <div class="displayflex color-fondo-texto">
-                    <div class="color-list displayflex column">
-                        <h3>COLOR</h3>
-                        <div class="color-input-texto displayflex">
-                            <input type="color" value="#000000"> 
-                            <span class="color-text">#000000</span>
-                        </div>
-                    </div>
-                    <div class="color-list displayflex column">
-                        <h3>FONDO</h3>
-                        <div class="color-input-texto displayflex">
-                            <input type="color" value="#FFFFFF"> 
-                            <span class="color-text">#FFFFFF</span>
-                        </div>
-                    </div>
+              </div>
+              <div class="color-list displayflex column">
+                <h3>FONDO</h3>
+                <div class="color-input-texto displayflex">
+                  <input type="color" value="#FFFFFF" />
+                  <span class="color-text">#FFFFFF</span>
                 </div>
-                <div class="displayflex fondo-transparente">
-                    <input type="checkbox" name="fondo transparente" id="">
-                    <label for="fondo-transparente">Fondo transparente</label>
-                </div>
+              </div>
             </div>
-
-            <div class="contorno-texto displayflex column">
-                <h3>CONTORNO</h3>
-                <div class="boton-contorno displayflex">
-                    <button class="control-text botones-contorno">Ninguno</button>
-                    <button class="control-text botones-contorno">Claro</button>
-                    <button class="control-text botones-contorno">Oscuro</button>
-                </div>
+            <div class="displayflex fondo-transparente">
+              <input type="checkbox" name="fondo transparente" id="" />
+              <label for="fondo-transparente">Fondo transparente</label>
             </div>
-            
+          </div>
 
+          <div class="contorno-texto displayflex column">
+            <h3>CONTORNO</h3>
+            <div class="boton-contorno displayflex">
+              <button class="control-text botones-contorno">Ninguno</button>
+              <button class="control-text botones-contorno">Claro</button>
+              <button class="control-text botones-contorno">Oscuro</button>
+            </div>
+          </div>
         </section>
-
-        <button class="reestablecer"> Reestablecer filtros </button>
-     </aside>
-
+      </aside>
     </div>
-    
-<script src="./js/app.js"></script>
-</body>
+
+    <script src="./js/index.js"></script>
+  </body>
 </html>
