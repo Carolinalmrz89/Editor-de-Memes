@@ -10,54 +10,54 @@
     <script src="https://kit.fontawesome.com/fc93a7f461.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="container displayflex">
-      <main class="main displayflex">
-        <header class="header-container displayflex">
+    <div class="container displayflex">
+      <div class="main displayflex">
+        <header class="header-container column displayflex">
             <div class="title displayflex">
                 <h1 class="title-h1">Generador de Memes</h1>
             </div>
+            <nav> 
+                <div class="nav">
+                   <ul class="displayflex">
+                       <li>
+                            <button class="control-text" id="boton-img"><i class="far fa-file-image"></i> Imagen </button>
+                       </li>
+                       <li>
+                            <button class="control-text" id="boton-texto"><i class="fas fa-font"></i> Texto </button>
+                       </li>
+                       <li>
+                            <a href="" id="boton-modo"><i class="far fa-lightbulb"></i> Modo oscuro </a>
+                       </li>
+                   </ul>
+                </div>
+            </nav>
         </header>
 
-        <nav> 
-            <div class="nav">
-               <ul class="displayflex">
-                   <li>
-                        <a href="" class="boton-img"><i class="far fa-file-image"></i> Imagen </a>
-                   </li>
-                   <li>
-                        <a href="" class=""><i class="fas fa-font"></i> Texto </a>
-                   </li>
-                   <li>
-                        <a href=""><i class="far fa-lightbulb"></i> Modo oscuro </a>
-                   </li>
-               </ul>
-            </div>
-        </nav>
-
-        <div class="central-panel">
+        <main class="central-panel">
             <div class="generator displayflex">
-                <header class="header-generator displayflex">
+                <div class="header-generator displayflex">
                     <h1 class="title-top">TOP TEXT</h1>
-                </header>
-                <main class="main-generator">
-                </main>
-                <footer class="footer-generator displayflex"> 
+                </div>
+                <div class="main-generator">
+                </div>
+                <div class="footer-generator displayflex"> 
                     <h1 class="title-bottom">BOTTOM TEXT</h1>
-                </footer>
+                </div>
             </div>
-
-            <button class="download"><i class="fas fa-download"></i> Descargar meme </button>
-        </div>
+            <div class="btn-download-container">
+                <button class="btn-download"><i class="fas fa-download"></i> Descargar meme </button>
+            </div>
+        </main>
 
        
-      </main>
+    </div>
 
 
       <!------------------ ASIDE ------------------>
 
-      <aside class="displayflex">
-        <!-----------BOTON PARA MOBILE
-        <button><i class="fas fa-times"></i></button>
+      <aside id="paneles" class="displayflex">
+        <!-----------BOTON PARA MOBILE 
+        <button id="boton-salir"><i class="fas fa-times"></i></button>
         -->
 
         <!------------------ PANEL IMAGEN ------------------>
@@ -133,7 +133,7 @@
 
         <!------------------ PANEL TEXTO ------------------>
 
-        <section class="text-panel displayflex column" id="texto-panel">
+        <section class="text-panel displayflex column ocultar-panel" id="texto-panel">
             <div class="title-text displayflex">
                 <h2>TEXTO</h2>
             </div>
@@ -218,6 +218,8 @@
         <button class="reestablecer"> Reestablecer filtros </button>
      </aside>
 
-    </section>
+    </div>
+    
+<script src="./js/app.js"></script>
 </body>
 </html>

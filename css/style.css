@@ -26,9 +26,13 @@
     flex-direction: row;
 }
 
-#texto-panel{
+.ocultar-panel{
     display: none;
 }
+/*
+#texto-panel{
+    display: none;
+}*/
 /************** MAIN ****************/
 
 .main{
@@ -118,7 +122,7 @@ li{
     font-weight: 800;
 }
 
-.download{
+.btn-download{
     margin-top: 15px;
     background-color: rgb(43, 156, 43);
     padding:14px ;
@@ -134,6 +138,13 @@ aside{
     background-color:#2A4150 ;
     flex-direction: column;
     padding: 10px;
+}
+
+#boton-salir{
+    background-color: #2A4150;
+    width: 15%;
+    color: white;
+    border: none;
 }
 
 /************PANEL IMAGEN************/
