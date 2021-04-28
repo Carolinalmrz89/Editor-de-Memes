@@ -13,7 +13,7 @@
     ></script>
   </head>
 
-  <body>
+  <body class="modoClaro">
     <div id="container" class="displayflex">
       <div class="main displayflex">
 
@@ -151,18 +151,14 @@
 
         <!------------------ PANEL TEXTO ------------------>
 
-        <section
-          class="text-panel displayflex column ocultar-panel"
-          id="texto-panel"
-        >
+        <section class="text-panel displayflex column ocultar-panel" id="texto-panel">
           <div class="title-text displayflex">
             <h2>TEXTO</h2>
           </div>
 
           <div class="superior-text displayflex column">
             <h3>SUPERIOR</h3>
-            <textarea class="control-text" name="superior" id="top-text">
-TOP TEXT</textarea>
+            <textarea class="control-text" name="superior" id="top-text">TOP TEXT</textarea>
           </div>
           <div class="sin-texto-superior displayflex">
             <input type="checkbox" name="superior" id="textoSuperior" />
@@ -171,19 +167,18 @@ TOP TEXT</textarea>
 
           <div class="inferior-text displayflex column">
             <h3>INFERIOR</h3>
-            <textarea class="control-text" name="inferior" id="bottom-text">
-BOTTOM TEXT</textarea>
+            <textarea class="control-text" name="inferior" id="bottom-text">BOTTOM TEXT</textarea>
           </div>
           <div class="sin-texto-inferior displayflex">
-            <input type="checkbox" name="inferior" id="textoInferior" />
+            <input type="checkbox" name="inferior" id="textoInferior"/>
             <label for="">Sin texto inferior</label>
           </div>
 
           <div class="fuente-texto displayflex column">
             <h3>FUENTE</h3>
             <select class="control-text" name="fuentes" id="select-fuente">
-              <option value="'Roboto'">Roboto</option>
-              <option value="'Open Sans'">Open Sans</option>
+              <option value="Impact">Impact</option>
+              <option value="'Verdana'">Verdana</option>
               <option value="'Montserrat'">Montserrat</option>
               <option value="Oswald">Oswald</option>
               <option value="Rubik">Rubik</option>
@@ -216,14 +211,14 @@ BOTTOM TEXT</textarea>
               <div class="color-list displayflex column">
                 <h3>COLOR</h3>
                 <div class="color-input-texto displayflex">
-                  <input type="color" value="#000000" id="color-fuente"/>
+                  <input type="color" value="#000000" class="control-text" id="color-fuente"/>
                   <span class="color-text">#000000</span>
                 </div>
               </div>
               <div class="color-list displayflex column">
                 <h3>FONDO</h3>
                 <div class="color-input-texto displayflex">
-                  <input type="color" value="#FFFFFF" id="color-fondo"/>
+                  <input type="color" value="#FFFFFF" class="control-text" id="color-fondo"/>
                   <span class="color-text">#FFFFFF</span>
                 </div>
               </div>

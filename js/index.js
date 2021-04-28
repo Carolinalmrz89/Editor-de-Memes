@@ -12,11 +12,11 @@ const panelAside = document.getElementById("paneles");
 const panelImg = document.getElementById("img-panel");
 const panelTexto = document.getElementById("texto-panel");
 
-botonImg.addEventListener("click", (event)=>{
+botonImg.addEventListener("click", ()=>{
     panelTexto.classList.add("ocultar-panel");
     panelImg.classList.remove("ocultar-panel");
 });
-botonTexto.addEventListener("click", (event)=>{
+botonTexto.addEventListener("click", ()=>{
     panelImg.classList.add("ocultar-panel");
     panelTexto.classList.remove("ocultar-panel");
 });
@@ -53,7 +53,7 @@ textoInferior.addEventListener("click", () =>{
     ocultarTextoInferior.classList.toggle("ocultar-panel");
 });
 
-//AGREGAR ESTILO FONDO TÍTULOS
+//AGREGAR ESTILO TÍTULOS
 const selectFuente = document.getElementById("select-fuente");
 const selectTamanioFuente = document.getElementById("tamanio-fuente");
 
@@ -91,6 +91,24 @@ fondoTransparente.addEventListener("click", () =>{
 });  
 
   
+//MODO CLARO - MODO OSCURO
+/*
+const botonModo = document.getElementById("boton-modo");
+const textoBotonModo = document.querySelector(".btn-nav");
+*/
+
+
+/**
+ boton.addEventListener("click",()=>{
+            body.classList.toggle("modoOscuro");
+            body.classList.toggle("modoClaro");
+            if(textInfo.textContent == "Modo Oscuro"){
+              textInfo.textContent = "Modo Claro";
+            }else{
+              textInfo.textContent = "Modo Oscuro";
+            }
+        })
+ */
 
 
 
