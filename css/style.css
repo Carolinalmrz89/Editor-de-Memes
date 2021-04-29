@@ -4,18 +4,23 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-body.modoClaro{
-    --colorFondoPrimario: #e0e0e0;
-    --colorFondoSecundario: #FAFAFA;
-    --colorFondoTerciario:#f1f1f1 ;
-    --colorTexto: black;
-}
-
 body.modoOscuro{
     --colorFondoPrimario: #2E323C;
     --colorFondoSecundario: #2A4150;
     --colorFondoTerciario: #5B7D86;
     --colorTexto: white;
+}
+
+body.modoClaro{
+    --colorFondoPrimario: #d6d6d6;
+    --colorFondoSecundario: #FAFAFA;
+    --colorFondoTerciario:#e4e3e3 ;
+    --colorTexto: black;
+}
+
+body{
+    background-color: var(--colorFondoPrimario);
+    color: var(--colorTexto);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
@@ -137,11 +142,13 @@ li{
 .title-top{
     font-size: 40px;
     font-weight: 800;
+    color: black;
 }
 
 .title-bottom{
     font-size: 40px;
     font-weight: 800;
+    color: black;
 }
 
 .btn-download{
@@ -150,6 +157,7 @@ li{
     padding:14px ;
     color: white;
     font-size: 18px;
+    border: none;
 }
 
 
@@ -260,12 +268,13 @@ select{
 
 .reestablecer{
     width: 70%;
-    background-color:#5B7D86;
+    background-color: var(--colorFondoTerciario);
     font-size: 14px;
     padding: 8px;
     border-radius: 5px;
     margin-top: 40px;
-    color: white;
+    color: var(--colorTexto);
+    border: none;
 }
 
 input[type='range'] {
@@ -293,6 +302,7 @@ input[type='range'] {
     border-radius: 3px;
     color: var(--colorTexto);
     border: none;
+    padding: 5px 10px;
 }
 
 .column{
@@ -351,6 +361,9 @@ input[type='checkbox']{
     padding-right: 10px;
 }
 
+.espaciado{
+    width: 100%;
+}
 
 
 

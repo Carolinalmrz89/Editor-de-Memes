@@ -92,10 +92,18 @@ fondoTransparente.addEventListener("click", () =>{
 
   
 //MODO CLARO - MODO OSCURO
-/*
-const botonModo = document.getElementById("boton-modo");
-const textoBotonModo = document.querySelector(".btn-nav");
-*/
+const body = document.querySelector("body");
+const textoBotonModo = document.querySelector(".texto-modo");
+
+botonModo.addEventListener("click", () =>{
+    body.classList.toggle("modoOscuro");
+    body.classList.toggle("modoClaro");
+    if(textoBotonModo.textContent == "Modo oscuro"){
+        textoBotonModo.textContent = "Modo claro";
+    }else{
+        textoBotonModo.textContent = "Modo oscuro";
+    }
+});
 
 
 /**

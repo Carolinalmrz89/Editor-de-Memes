@@ -13,7 +13,7 @@
     ></script>
   </head>
 
-  <body class="modoClaro">
+  <body class="modoOscuro">
     <div id="container" class="displayflex">
       <div class="main displayflex">
 
@@ -38,7 +38,7 @@
                 </li>
                 <li>
                   <button class="btn-nav" id="boton-modo">
-                    <i class="far fa-lightbulb"></i> Modo oscuro
+                    <i class="far fa-lightbulb"></i> <span class="texto-modo">Modo oscuro</span> 
                   </button>
                 </li>
               </ul>
@@ -91,7 +91,7 @@
             <h3>FONDO</h3>
             <div class="color-list displayflex">
               <div class="color displayflex">
-                <input type="color" value="#FFFFFF" class="control-text" />
+                <input type="color" value="#FFFFFF"/>
                 <span class="color-text">#FFFFFF</span>
               </div>
               <select name="fondo" id="fondo" class="control-text">
@@ -179,12 +179,12 @@
             <select class="control-text" name="fuentes" id="select-fuente">
               <option value="Impact">Impact</option>
               <option value="'Verdana'">Verdana</option>
-              <option value="'Montserrat'">Montserrat</option>
-              <option value="Oswald">Oswald</option>
-              <option value="Rubik">Rubik</option>
-              <option value="'Mukta'">Mukta</option>
-              <option value="Inter">Inter</option>
-              <option value="Source Code Pro">Source Code Pro</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Cambria">Cambria</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Courier">Courier</option>
+              <option value="Arial">Arial</option>
             </select>
             <div class="estilos-fuente displayflex">
               <div class="font-size">
@@ -211,14 +211,14 @@
               <div class="color-list displayflex column">
                 <h3>COLOR</h3>
                 <div class="color-input-texto displayflex">
-                  <input type="color" value="#000000" class="control-text" id="color-fuente"/>
+                  <input type="color" value="#000000" id="color-fuente"/>
                   <span class="color-text">#000000</span>
                 </div>
               </div>
               <div class="color-list displayflex column">
                 <h3>FONDO</h3>
                 <div class="color-input-texto displayflex">
-                  <input type="color" value="#FFFFFF" class="control-text" id="color-fondo"/>
+                  <input type="color" value="#FFFFFF" id="color-fondo"/>
                   <span class="color-text">#FFFFFF</span>
                 </div>
               </div>
@@ -236,6 +236,12 @@
               <button class="control-text botones-contorno">Claro</button>
               <button class="control-text botones-contorno">Oscuro</button>
             </div>
+          </div>
+
+          <div>
+            <h3>ESPACIADO</h3>
+            <input class="control-text espaciado" type="number" aria-label="Espaciado" id="texto-espaciado"
+            min="10" max="50" value="35">
           </div>
         </section>
       </aside>
