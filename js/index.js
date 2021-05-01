@@ -47,7 +47,13 @@ topText.addEventListener("input", () =>{
 const textoSuperior = document.getElementById("textoSuperior");
 
 textoSuperior.addEventListener("change", () =>{
-    topTitle.classList.toggle("ocultar");
+    if(textoSuperior.checked){
+        topTitle.classList.add("ocultar");
+        topText.disabled = true;
+    }else{
+        topTitle.classList.remove("ocultar");
+        topText.disabled = false;
+    }
 });
 
 //MODIFICAR BOTTOM TEXT
@@ -62,10 +68,16 @@ bottomText.addEventListener("input", () =>{
 const textoInferior = document.getElementById("textoInferior");
 
 textoInferior.addEventListener("change", () =>{
-    bottomTitle.classList.toggle("ocultar");
+    if(textoInferior.checked){
+        bottomTitle.classList.add("ocultar");
+        bottomText.disabled = true;
+    }else{
+        bottomTitle.classList.remove("ocultar");
+        bottomText.disabled = false;
+    }
 });
 
-//AGREGAR ESTILO TÍTULOS
+//ESTILO FUENTE TEXTOS
 const selectFuente = document.getElementById("select-fuente");
 const selectTamanioFuente = document.getElementById("tamanio-fuente");
 
@@ -77,7 +89,7 @@ selectTamanioFuente.addEventListener("input", () =>{
     topTitle.style.fontSize = selectTamanioFuente.value;
 });
 
-//AGREGAR ESTILO COLOR TÍTULOS
+//ESTILO COLOR TEXTOS
 const colorFuente = document.getElementById("color-fuente");
 const colorFondoFuente = document.getElementById("color-fondo");
 
