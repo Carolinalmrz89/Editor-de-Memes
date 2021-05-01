@@ -13,12 +13,12 @@ const panelImg = document.getElementById("img-panel");
 const panelTexto = document.getElementById("texto-panel");
 
 botonImg.addEventListener("click", ()=>{
-    panelTexto.classList.add("ocultar-panel");
-    panelImg.classList.remove("ocultar-panel");
+    panelTexto.classList.add("ocultar");
+    panelImg.classList.remove("ocultar");
 });
 botonTexto.addEventListener("click", ()=>{
-    panelImg.classList.add("ocultar-panel");
-    panelTexto.classList.remove("ocultar-panel");
+    panelImg.classList.add("ocultar");
+    panelTexto.classList.remove("ocultar");
 });
 
 //MODIFICAR TOP TEXT
@@ -33,7 +33,7 @@ topText.addEventListener("input", () =>{
 const textoSuperior = document.getElementById("textoSuperior");
 
 textoSuperior.addEventListener("change", () =>{
-    topTitle.classList.toggle("ocultar-panel");
+    topTitle.classList.toggle("ocultar");
 });
 
 //MODIFICAR BOTTOM TEXT
@@ -48,7 +48,7 @@ bottomText.addEventListener("input", () =>{
 const textoInferior = document.getElementById("textoInferior");
 
 textoInferior.addEventListener("change", () =>{
-    bottomTitle.classList.toggle("ocultar-panel");
+    bottomTitle.classList.toggle("ocultar");
 });
 
 //AGREGAR ESTILO TÍTULOS

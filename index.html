@@ -14,35 +14,24 @@
   </head>
 
   <body class="modoOscuro">
-    <div id="container" class="displayflex">
-      <div class="main displayflex">
+    <div id="container">
+      <div class="main column">
 
         <!----------------------- HEADER ---------------------->
 
-        <header class="header-container column displayflex">
-          <div class="title-container">
-            <h1>Generador de Memes</h1>
-          </div>
+        <header class="column">
+          <h1>Generador de Memes</h1>
+          
           <nav>
-            <div class="nav">
-              <ul class="displayflex">
-                <li>
-                  <button class="btn-nav" id="boton-img">
-                    <i class="far fa-file-image"></i> Imagen
-                  </button>
-                </li>
-                <li>
-                  <button class="btn-nav" id="boton-texto">
-                    <i class="fas fa-font"></i> Texto
-                  </button>
-                </li>
-                <li>
-                  <button class="btn-nav" id="boton-modo">
-                    <i class="far fa-lightbulb"></i> <span class="texto-modo">Modo oscuro</span> 
-                  </button>
-                </li>
-              </ul>
-            </div>
+            <button class="btn-nav" id="boton-img">
+              <i class="far fa-file-image"></i> Imagen
+            </button>
+            <button class="btn-nav" id="boton-texto">
+              <i class="fas fa-font"></i> Texto
+            </button>
+            <button class="btn-nav" id="boton-modo">
+              <i class="far fa-lightbulb"></i><span class="texto-modo">Modo oscuro</span> 
+            </button>
           </nav>
         </header>
 
@@ -51,17 +40,12 @@
         <main class="central-panel">
           <div class="generator">
               <p class="title-top">TOP TEXT</h1>
-          
               <div class="main-generator"></div>
-            
               <p class="title-bottom">BOTTOM TEXT</h1>
           </div>
-
-          <div class="btn-download-container">
-            <button class="btn-download">
-              <i class="fas fa-download"></i> Descargar meme
-            </button>
-          </div>
+          <button class="btn-download">
+            <i class="fas fa-download"></i> Descargar meme
+          </button>
         </main>
       </div>
 
@@ -70,26 +54,24 @@
 
       <aside id="paneles" class="displayflex">
 
-        <!---------------BOTON PARA MOBILE ----------------->
+        <!---------------BOTÓN PARA MOBILE ----------------->
         <button id="btn-salir"><i class="fas fa-times"></i></button>
 
         <!------------------ PANEL IMAGEN ------------------>
         <section id="img-panel">
-          <div class="title-img displayflex">
-            <h2>IMAGEN</h2>
-          </div>
-
-          <div class="url-img displayflex">
+          <h2>IMAGEN</h2>
+         
+          <div class="column">
             <h3>URL</h3>
             <input type="url" class="control-text" />
           </div>
 
-          <div class="fondo-img displayflex column">
+          <div class="column">
             <h3>FONDO</h3>
-            <div class="color-list displayflex">
-              <div class="color displayflex">
+            <div class="color-list">
+              <div class="color">
                 <input type="color" value="#FFFFFF"/>
-                <span class="color-text">#FFFFFF</span>
+                <span id="color-text">#FFFFFF</span>
               </div>
               <select name="fondo" id="fondo" class="control-text">
                 <option value="">Ninguno</option>
@@ -102,53 +84,53 @@
             </div>
           </div>
 
-          <div class="filtros-img displayflex">
+          <div class="filtros-img column">
             <h3>FILTROS</h3>
-            <div class="brillo displayflex filtros">
+            <div class="column">
               <label for="brillo">BRILLO</label>
               <input type="range" name="brillo" id="" />
             </div>
-            <div class="opacidad displayflex filtros">
+            <div class="column">
               <label for="brillo">OPACIDAD</label>
               <input type="range" name="opacidad" id="" />
             </div>
-            <div class="contraste displayflex filtros">
+            <div class="column">
               <label for="brillo">CONTRASTE</label>
               <input type="range" name="contraste" id="" />
             </div>
-            <div class="desenfoque displayflex filtros">
+            <div class="column">
               <label for="desenfoque">DESENFOQUE</label>
               <input type="range" name="desenfoque" id="" />
             </div>
-            <div class="escala displayflex filtros">
+            <div class="column">
               <label for="escala">ESCALA DE GRISES</label>
               <input type="range" name="escala" id="" />
             </div>
-            <div class="sepia displayflex filtros">
+            <div class="column">
               <label for="sepia">SEPIA</label>
               <input type="range" name="sepia" id="" />
             </div>
-            <div class="hue displayflex filtros">
+            <div class="column">
               <label for="hue">HUE</label>
               <input type="range" name="hue" id="" />
             </div>
-            <div class="saturado displayflex filtros">
+            <div class="column">
               <label for="saturado">SATURADO</label>
               <input type="range" name="saturado" id="" />
             </div>
-            <div class="negativo displayflex filtros">
+            <div class="column">
               <label for="negativo">NEGATIVO</label>
               <input type="range" name="negativo" id="" />
             </div>
           </div>
-          <div class="btn-reestablecer-aside">
-            <button class="reestablecer">Reestablecer filtros</button>
-          </div>
+         
+          <button id="btn-reestablecer">Reestablecer filtros</button>
+         
         </section>
 
         <!------------------ PANEL TEXTO ------------------>
 
-        <section class="text-panel displayflex column ocultar-panel" id="texto-panel">
+        <section class="ocultar" id="texto-panel">
           <div class="title-text displayflex">
             <h2>TEXTO</h2>
           </div>
@@ -238,7 +220,7 @@
           <div>
             <h3>ESPACIADO</h3>
             <input class="control-text espaciado" type="number" aria-label="Espaciado" id="texto-espaciado"
-            min="10" max="50" value="10">
+            min="10" max="50" value="20">
           </div>
 
           <div>
