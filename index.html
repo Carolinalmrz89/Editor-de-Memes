@@ -20,8 +20,8 @@
         <!----------------------- HEADER ---------------------->
 
         <header class="header-container column displayflex">
-          <div class="title-container displayflex">
-            <h1 class="title">Generador de Memes</h1>
+          <div class="title-container">
+            <h1>Generador de Memes</h1>
           </div>
           <nav>
             <div class="nav">
@@ -49,17 +49,14 @@
         <!----------------------- MAIN ---------------------->
 
         <main class="central-panel">
-          <div class="generator displayflex">
-            <div class="header-generator displayflex">
-              <h1 class="title-top">TOP TEXT</h1>
-            </div>
-            <div class="main-generator">
-              <img src="" alt="">
-            </div>
-            <div class="footer-generator displayflex">
-              <h1 class="title-bottom">BOTTOM TEXT</h1>
-            </div>
+          <div class="generator">
+              <p class="title-top">TOP TEXT</h1>
+          
+              <div class="main-generator"></div>
+            
+              <p class="title-bottom">BOTTOM TEXT</h1>
           </div>
+
           <div class="btn-download-container">
             <button class="btn-download">
               <i class="fas fa-download"></i> Descargar meme
@@ -241,7 +238,19 @@
           <div>
             <h3>ESPACIADO</h3>
             <input class="control-text espaciado" type="number" aria-label="Espaciado" id="texto-espaciado"
-            min="10" max="50" value="35">
+            min="10" max="50" value="10">
+          </div>
+
+          <div>
+            <h3>INTERLINEADO</h3>
+            <select class="control-text interlineado" id="texto-interlineado" aria-label="Interlineado">
+              <option value="0.8">0.8</option>
+              <option value="1">1</option>
+              <option value="1.2">1.2</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
+            </select>
           </div>
         </section>
       </aside>

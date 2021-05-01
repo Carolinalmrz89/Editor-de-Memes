@@ -31,10 +31,9 @@ topText.addEventListener("input", () =>{
 
 //OCULTAR TOP TEXT
 const textoSuperior = document.getElementById("textoSuperior");
-const ocultarTextoSuperior = document.querySelector(".header-generator");
 
-textoSuperior.addEventListener("click", () =>{
-    ocultarTextoSuperior.classList.toggle("ocultar-panel");
+textoSuperior.addEventListener("change", () =>{
+    topTitle.classList.toggle("ocultar-panel");
 });
 
 //MODIFICAR BOTTOM TEXT
@@ -47,10 +46,9 @@ bottomText.addEventListener("input", () =>{
 
 //OCULTAR BOTTOM TEXT
 const textoInferior = document.getElementById("textoInferior");
-const ocultarTextoInferior = document.querySelector(".footer-generator");
 
-textoInferior.addEventListener("click", () =>{
-    ocultarTextoInferior.classList.toggle("ocultar-panel");
+textoInferior.addEventListener("change", () =>{
+    bottomTitle.classList.toggle("ocultar-panel");
 });
 
 //AGREGAR ESTILO TÍTULOS
@@ -76,19 +74,16 @@ colorFuente.addEventListener("input", () =>{
 colorFondoFuente.addEventListener("input", () =>{
     topTitle.style.backgroundColor = colorFondoFuente.value;
     bottomTitle.style.backgroundColor = colorFondoFuente.value;
-    ocultarTextoSuperior.style.backgroundColor = colorFondoFuente.value;
-    ocultarTextoInferior.style.backgroundColor = colorFondoFuente.value;
 });
 
 //FONDO TRANSPARENTE
+/*
 const fondoTransparente = document.getElementById("fondo-transparente");
 
 fondoTransparente.addEventListener("click", () =>{
     topTitle.classList.toggle("fondo-transparente");
     bottomTitle.classList.toggle("fondo-transparente");
-    ocultarTextoSuperior.style.backgroundColor = 'transparent';
-    ocultarTextoInferior.style.backgroundColor = 'transparent';
-});  
+});  */
 
   
 //MODO CLARO - MODO OSCURO
