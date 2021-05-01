@@ -7,6 +7,20 @@ const botonImg = document.getElementById("boton-img");
 const botonTexto = document.getElementById("boton-texto");
 const botonModo = document.getElementById("boton-modo");
 
+//MODO CLARO - MODO OSCURO
+const body = document.querySelector("body");
+const textoBotonModo = document.querySelector(".texto-modo");
+
+botonModo.addEventListener("click", () =>{
+    body.classList.toggle("modoOscuro");
+    body.classList.toggle("modoClaro");
+    if(textoBotonModo.textContent == "Modo oscuro"){
+        textoBotonModo.textContent = "Modo claro";
+    }else{
+        textoBotonModo.textContent = "Modo oscuro";
+    }
+});
+
 //CAMBIAR PANEL EN SECTION ASIDE
 const panelAside = document.getElementById("paneles");
 const panelImg = document.getElementById("img-panel");
@@ -26,7 +40,7 @@ const topTitle = document.querySelector(".title-top");
 const topText = document.getElementById("top-text");
 
 topText.addEventListener("input", () =>{
-    topTitle.textContent = topText.value;
+    topTitle.innerText = topText.value;
 });
 
 //OCULTAR TOP TEXT
@@ -41,7 +55,7 @@ const bottomTitle = document.querySelector(".title-bottom");
 const bottomText = document.getElementById("bottom-text");
 
 bottomText.addEventListener("input", () =>{
-    bottomTitle.textContent = bottomText.value;
+    bottomTitle.innerText = bottomText.value;
 });
 
 //OCULTAR BOTTOM TEXT
@@ -77,41 +91,27 @@ colorFondoFuente.addEventListener("input", () =>{
 });
 
 //FONDO TRANSPARENTE
-/*
 const fondoTransparente = document.getElementById("fondo-transparente");
 
-fondoTransparente.addEventListener("click", () =>{
-    topTitle.classList.toggle("fondo-transparente");
-    bottomTitle.classList.toggle("fondo-transparente");
-});  */
-
-  
-//MODO CLARO - MODO OSCURO
-const body = document.querySelector("body");
-const textoBotonModo = document.querySelector(".texto-modo");
-
-botonModo.addEventListener("click", () =>{
-    body.classList.toggle("modoOscuro");
-    body.classList.toggle("modoClaro");
-    if(textoBotonModo.textContent == "Modo oscuro"){
-        textoBotonModo.textContent = "Modo claro";
+fondoTransparente.addEventListener("change", () =>{
+    if(fondoTransparente.checked){
+        topTitle.style.backgroundColor = 'transparent'; 
     }else{
-        textoBotonModo.textContent = "Modo oscuro";
+        topTitle.style.backgroundColor = colorFondoFuente.value;
     }
 });
 
+fondoTransparente.addEventListener("change", () =>{
+    if(fondoTransparente.checked){
+        bottomTitle.style.backgroundColor = 'transparent'; 
+    }else{
+        bottomTitle.style.backgroundColor = colorFondoFuente.value;
+    }
+});
+  
 
-/**
- boton.addEventListener("click",()=>{
-            body.classList.toggle("modoOscuro");
-            body.classList.toggle("modoClaro");
-            if(textInfo.textContent == "Modo Oscuro"){
-              textInfo.textContent = "Modo Claro";
-            }else{
-              textInfo.textContent = "Modo Oscuro";
-            }
-        })
- */
+
+
 
 
 

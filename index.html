@@ -68,7 +68,7 @@
 
           <div class="column">
             <h3>FONDO</h3>
-            <div class="color-list">
+            <div class="color-list-img">
               <div class="color">
                 <input type="color" value="#FFFFFF"/>
                 <span id="color-text">#FFFFFF</span>
@@ -131,29 +131,28 @@
         <!------------------ PANEL TEXTO ------------------>
 
         <section class="ocultar" id="texto-panel">
-          <div class="title-text displayflex">
-            <h2>TEXTO</h2>
-          </div>
-
-          <div class="superior-text displayflex column">
+       
+          <h2>TEXTO</h2>
+         
+          <div class="column">
             <h3>SUPERIOR</h3>
             <textarea class="control-text" name="superior" id="top-text">TOP TEXT</textarea>
           </div>
-          <div class="sin-texto-superior displayflex">
+          <div class="sin-texto-superior">
             <input type="checkbox" name="superior" id="textoSuperior" />
             <label for="">Sin texto superior</label>
           </div>
 
-          <div class="inferior-text displayflex column">
+          <div class="column">
             <h3>INFERIOR</h3>
             <textarea class="control-text" name="inferior" id="bottom-text">BOTTOM TEXT</textarea>
           </div>
-          <div class="sin-texto-inferior displayflex">
+          <div class="sin-texto-inferior">
             <input type="checkbox" name="inferior" id="textoInferior"/>
             <label for="">Sin texto inferior</label>
           </div>
 
-          <div class="fuente-texto displayflex column">
+          <div class="column">
             <h3>FUENTE</h3>
             <select class="control-text" name="fuentes" id="select-fuente">
               <option value="Impact">Impact</option>
@@ -165,67 +164,67 @@
               <option value="Courier">Courier</option>
               <option value="Arial">Arial</option>
             </select>
-            <div class="estilos-fuente displayflex">
+
+            <div class="estilos-fuente">
               <div class="font-size">
-                <input
-                  class="control-text tamanio-fuente" type="number"
+                <input class="control-text tamanio-fuente" type="number"
                   name="tamanio" id="tamanio-fuente" min="12" value="40"/>
               </div>
               <div class="font-size">
-                <button class="control-text boton-size">
+                <button class="control-text" id="boton-size">
                   <i class="fas fa-align-left"></i>
                 </button>
-                <button class="control-text boton-size">
+                <button class="control-text" id="boton-size">
                   <i class="fas fa-align-center"></i>
                 </button>
-                <button class="control-text boton-size">
+                <button class="control-text" id="boton-size">
                   <i class="fas fa-align-right"></i>
                 </button>
               </div>
             </div>
           </div>
 
-          <div class="fondo-texto displayflex column">
+          <div class="fondo-texto column">
             <div class="displayflex color-fondo-texto">
-              <div class="color-list displayflex column">
+              <div class="color-list column">
                 <h3>COLOR</h3>
-                <div class="color-input-texto displayflex">
+                <div class="color-input-texto">
                   <input type="color" value="#000000" id="color-fuente"/>
-                  <span class="color-text">#000000</span>
+                  <span id="color-text">#000000</span>
                 </div>
               </div>
-              <div class="color-list displayflex column">
+              <div class="color-list column">
                 <h3>FONDO</h3>
-                <div class="color-input-texto displayflex">
+                <div class="color-input-texto">
                   <input type="color" value="#FFFFFF" id="color-fondo"/>
-                  <span class="color-text">#FFFFFF</span>
+                  <span id="color-text">#FFFFFF</span>
                 </div>
               </div>
             </div>
-            <div class="displayflex fondo-transparente">
+            <div class="fondo-transparente">
               <input type="checkbox" name="fondo transparente" id="fondo-transparente" />
               <label for="fondo-transparente">Fondo transparente</label>
             </div>
           </div>
 
-          <div class="contorno-texto displayflex column">
+          <div class="column">
             <h3>CONTORNO</h3>
-            <div class="boton-contorno displayflex">
-              <button class="control-text botones-contorno">Ninguno</button>
-              <button class="control-text botones-contorno">Claro</button>
-              <button class="control-text botones-contorno">Oscuro</button>
+            <div class="boton-contorno">
+              <button class="control-text" id="botones-contorno">Ninguno</button>
+              <button class="control-text" id="botones-contorno">Claro</button>
+              <button class="control-text" id="botones-contorno">Oscuro</button>
             </div>
           </div>
 
           <div>
             <h3>ESPACIADO</h3>
-            <input class="control-text espaciado" type="number" aria-label="Espaciado" id="texto-espaciado"
+            <input class="control-text" type="number" aria-label="Espaciado" id="texto-espaciado"
             min="10" max="50" value="20">
           </div>
 
           <div>
             <h3>INTERLINEADO</h3>
-            <select class="control-text interlineado" id="texto-interlineado" aria-label="Interlineado">
+            <select class="control-text" id="texto-interlineado" aria-label="Interlineado">
               <option value="0.8">0.8</option>
               <option value="1">1</option>
               <option value="1.2">1.2</option>

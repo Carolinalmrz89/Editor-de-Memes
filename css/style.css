@@ -49,10 +49,6 @@ body{
     display: none;
 }
 
-.fondo-transparente{
-    background-color: transparent;
-}
-
 button{
     cursor: pointer;
 }
@@ -193,7 +189,7 @@ label{
     color: var(--colorTexto);
 }
 
-.color-list{
+.color-list-img{
     display: flex;
     justify-content: space-between;
 }
@@ -202,7 +198,7 @@ label{
     display: flex;
     background-color: var(--colorFondoTerciario);
     align-items: center;
-    width: 45%;
+    width: 48%;
     border-radius: 3px;
 }
 
@@ -227,9 +223,9 @@ input[type="color" i]{
 }
 
 #fondo{
-    width: 45%;
+    width: 48%;
     background-color: var(--colorFondoTerciario);
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 14px;
 }
 
@@ -263,10 +259,12 @@ input[type='range'] {
 /*******PANEL TEXTO*******/
 
 .sin-texto-superior{
+    display: flex;
     align-items: center;
 }
 
 .sin-texto-inferior{
+    display: flex;
     align-items: center;
 }
 
@@ -289,14 +287,22 @@ input[type='range'] {
 
 .estilos-fuente{
     margin-top: 5px;
+    display: flex;
     justify-content: space-between;
 }
 
-.boton-size{
-    width: 33px;
+#boton-size{
+    width: 30%;
+}
+
+.color-list{
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
 }
 
 .color-input-texto{
+    display: flex;
     background-color: var(--colorFondoTerciario);
     align-items: center;
     width: 100%;
@@ -313,6 +319,7 @@ input[type='range'] {
 }
 
 .fondo-transparente{
+    display: flex;
     align-items: center;
 }
 
@@ -322,20 +329,21 @@ input[type='checkbox']{
 }
 
 .boton-contorno{
+    display: flex;
     justify-content: space-between;
 }
 
-.botones-contorno{
+#botones-contorno{
     font-size: 14px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
-.espaciado{
+#texto-espaciado{
     width: 100%;
 }
 
-.interlineado{
+#texto-interlineado{
     width: 100%;
 }
 
