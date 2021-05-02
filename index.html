@@ -17,7 +17,7 @@
     <div id="container">
       <div class="main column">
 
-        <!----------------------- HEADER ---------------------->
+      <!----------------------- HEADER ---------------------->
 
         <header class="column">
           <h1>Generador de Memes</h1>
@@ -35,13 +35,13 @@
           </nav>
         </header>
 
-        <!----------------------- MAIN ---------------------->
+      <!----------------------- MAIN ---------------------->
 
         <main class="central-panel">
           <div class="generator">
-              <p class="title-top">TOP TEXT</h1>
+              <p class="title-top">TOP TEXT</p>
               <div class="main-generator"></div>
-              <p class="title-bottom">BOTTOM TEXT</h1>
+              <p class="title-bottom">BOTTOM TEXT</p>
           </div>
           <button class="btn-download">
             <i class="fas fa-download"></i> Descargar meme
@@ -54,10 +54,10 @@
 
       <aside id="paneles" class="displayflex">
 
-        <!---------------BOTÓN PARA MOBILE ----------------->
+      <!---------------BOTÓN PARA MOBILE ----------------->
         <button id="btn-salir"><i class="fas fa-times"></i></button>
 
-        <!------------------ PANEL IMAGEN ------------------>
+      <!------------------ PANEL IMAGEN ------------------>
         <section id="img-panel">
           <h2>IMAGEN</h2>
          
@@ -168,16 +168,16 @@
             <div class="estilos-fuente">
               <div class="font-size">
                 <input class="control-text tamanio-fuente" type="number"
-                  name="tamanio" id="tamanio-fuente" min="12" value="40"/>
+                  name="Tamaño de fuente" aria-label="Tamaño de fuente" id="tamanio-fuente" min="12" value="40"/>
               </div>
               <div class="font-size">
-                <button class="control-text" id="boton-size">
+                <button class="control-text boton-size" id="btn-left">
                   <i class="fas fa-align-left"></i>
                 </button>
-                <button class="control-text" id="boton-size">
+                <button class="control-text boton-size" id="btn-center">
                   <i class="fas fa-align-center"></i>
                 </button>
-                <button class="control-text" id="boton-size">
+                <button class="control-text boton-size" id="btn-right">
                   <i class="fas fa-align-right"></i>
                 </button>
               </div>
@@ -210,9 +210,9 @@
           <div class="column">
             <h3>CONTORNO</h3>
             <div class="boton-contorno">
-              <button class="control-text" id="botones-contorno">Ninguno</button>
-              <button class="control-text" id="botones-contorno">Claro</button>
-              <button class="control-text" id="botones-contorno">Oscuro</button>
+              <button class="control-text botones-contorno" id="btn-ninguno">Ninguno</button>
+              <button class="control-text botones-contorno" id="btn-claro">Claro</button>
+              <button class="control-text botones-contorno" id="btn-oscuro">Oscuro</button>
             </div>
           </div>
 

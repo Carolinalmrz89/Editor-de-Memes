@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+
 //CONTAINER
 const container = document.getElementById("container");
 
@@ -34,6 +35,9 @@ botonTexto.addEventListener("click", ()=>{
     panelImg.classList.add("ocultar");
     panelTexto.classList.remove("ocultar");
 });
+
+
+//FUNCIONALIDADES EN PANEL DE TEXTO
 
 //MODIFICAR TOP TEXT
 const topTitle = document.querySelector(".title-top");
@@ -79,17 +83,64 @@ textoInferior.addEventListener("change", () =>{
 
 //ESTILO FUENTE TEXTOS
 const selectFuente = document.getElementById("select-fuente");
-const selectTamanioFuente = document.getElementById("tamanio-fuente");
 
 selectFuente.addEventListener("input", () =>{
     topTitle.style.fontFamily = selectFuente.value;
     bottomTitle.style.fontFamily = selectFuente.value;
 });
-selectTamanioFuente.addEventListener("input", () =>{
-    topTitle.style.fontSize = selectTamanioFuente.value;
+
+//TAMAÑO DE TEXTO
+const tamanioFuente = document.getElementById("tamanio-fuente");
+
+tamanioFuente.addEventListener("input", () =>{
+    const selectTamanioFuente = tamanioFuente.value;
+    topTitle.style.fontSize = `${selectTamanioFuente}px`;
+    bottomTitle.style.fontSize = `${selectTamanioFuente}px`;
 });
 
-//ESTILO COLOR TEXTOS
+//ALINEACIÓN DE TEXTO
+const botonLeft = document.getElementById("btn-left");
+const botonCenter = document.getElementById("btn-center");
+const botonRight = document.getElementById("btn-right");
+
+botonLeft.addEventListener("click", () =>{
+    topTitle.style.textAlign = "left";
+    bottomTitle.style.textAlign = "left";
+});
+
+botonCenter.addEventListener("click", () =>{
+    topTitle.style.textAlign = "center";
+    bottomTitle.style.textAlign = "center";
+});
+
+botonRight.addEventListener("click", () =>{
+    topTitle.style.textAlign = "right";
+    bottomTitle.style.textAlign = "right";
+});
+
+//CONTORNO DE TEXTO
+
+const botonNinguno = document.getElementById("btn-ninguno");
+const botonClaro = document.getElementById("btn-claro");
+const botonOscuro = document.getElementById("btn-oscuro");
+
+botonNinguno.addEventListener("click", () =>{
+    topTitle.style.textShadow = "none";
+    bottomTitle.style.textShadow = "none";
+});
+
+botonClaro.addEventListener("click", () =>{
+    topTitle.style.textShadow = "rgb(255 255 255) 2px 2px, rgb(255 255 255) -2px 2px, rgb(255 255 255) 2px -2px, rgb(255 255 255) -2px -2px";
+    bottomTitle.style.textShadow = "rgb(255 255 255) 2px 2px, rgb(255 255 255) -2px 2px, rgb(255 255 255) 2px -2px, rgb(255 255 255) -2px -2px";
+});
+
+botonOscuro.addEventListener("click", () =>{
+    topTitle.style.textShadow = "rgb(0 0 0) 2px 2px, rgb(0 0 0) -2px 2px, rgb(0 0 0) 2px -2px, rgb(0 0 0) -2px -2px";
+    bottomTitle.style.textShadow = "rgb(0 0 0) 2px 2px, rgb(0 0 0) -2px 2px, rgb(0 0 0) 2px -2px, rgb(0 0 0) -2px -2px";
+});
+
+
+//ESTILO COLOR Y FONDO TEXTOS
 const colorFuente = document.getElementById("color-fuente");
 const colorFondoFuente = document.getElementById("color-fondo");
 
@@ -119,6 +170,23 @@ fondoTransparente.addEventListener("change", () =>{
     }else{
         bottomTitle.style.backgroundColor = colorFondoFuente.value;
     }
+});
+
+//ESPACIADO DE TEXTO
+const espaciado = document.getElementById("texto-espaciado");
+
+espaciado.addEventListener("input", () =>{
+    const textoEspaciado = espaciado.value;
+    topTitle.style.padding = `${textoEspaciado}px 20px`;
+    bottomTitle.style.padding = `${textoEspaciado}px 20px`;
+});
+
+//INTERLINEADO DE TEXTO
+const interlineado = document.getElementById("texto-interlineado");
+
+interlineado.addEventListener("input", () =>{
+    topTitle.style.lineHeight = interlineado.value;
+    bottomTitle.style.lineHeight = interlineado.value;
 });
   
 
