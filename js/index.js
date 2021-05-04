@@ -271,6 +271,16 @@ interlineado.addEventListener("input", () =>{
     topTitle.style.lineHeight = interlineado.value;
     bottomTitle.style.lineHeight = interlineado.value;
 });
+
+
+
+//VERSIÓN MOBILE
+const mainContariner = document.querySelector(".main");
+const botonSalir = document.getElementById("btn-salir");
+
+
+
+
   
 
 
