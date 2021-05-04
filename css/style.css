@@ -9,13 +9,17 @@ body.modoOscuro{
     --colorFondoSecundario: #2A4150;
     --colorFondoTerciario: #5B7D86;
     --colorTexto: white;
+    --colorBotonHover: #424652;
+    --colorInputHover: #7297a1;
 }
 
 body.modoClaro{
-    --colorFondoPrimario: #d6d6d6;
+    --colorFondoPrimario: #cacaca;
     --colorFondoSecundario: #FAFAFA;
     --colorFondoTerciario:#e4e3e3 ;
     --colorTexto: black;
+    --colorBotonHover: #bebdbd;
+    --colorInputHover: #c7c6c6;
 }
 
 body{
@@ -41,6 +45,7 @@ body{
 
 #container{
     width: 100%;
+    height: 730px;
     display: flex;
     flex-direction: row;
 }
@@ -80,6 +85,7 @@ nav{
     justify-content: center;
     align-items: center;
     background-color: var(--colorFondoPrimario);
+    padding: 5px;
 }
 
 .btn-nav{
@@ -87,7 +93,12 @@ nav{
     border: none;
     color: var(--colorTexto);
     font-size: 14px;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.btn-nav:hover{
+    background-color: var(--colorBotonHover);
 }
 
 .texto-modo{
@@ -96,6 +107,7 @@ nav{
 
 .central-panel{
     width:100%;
+    height: 100%;
     background-color: var(--colorFondoTerciario);
     display: flex;
     flex-direction: column;
@@ -105,18 +117,19 @@ nav{
 
 .generator{
     display: flex;
-    width: 600px;
-    height: 600px ;
+    width: 50%;
+    height: 100% ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
 }
 
-.main-generator{
+.img-meme{
     width: 100%;
     height: 100%;
     background-color: black;
+    background-size: cover;
 }
 
 p{
@@ -137,16 +150,23 @@ p{
     color: white;
     font-size: 18px;
     border: none;
+    border-radius: 3px;
+}
+
+.btn-download:hover{
+    background-color: rgb(44, 141, 44);
 }
 
 
-/*************ASIDE*************/
+/*****************ASIDE*****************/
 
 aside{
+    display: flex;
     width:22%;
     background-color: var(--colorFondoSecundario);
     flex-direction: column;
     padding: 10px;
+    padding-bottom: 20px;
     color: white;
 }
 
@@ -158,7 +178,7 @@ aside{
     display: none;
 }
 
-/************PANEL IMAGEN***********/
+/***************PANEL IMAGEN*************/
 
 h2{
     display: flex;
@@ -182,6 +202,10 @@ input{
     border: none;
 }
 
+input:hover{
+    background-color: var(--colorInputHover);
+}
+
 label{
     font-size: 12px;
     margin-top: 10px;
@@ -201,6 +225,10 @@ label{
     border-radius: 3px;
 }
 
+.color:hover{
+    background-color: var(--colorInputHover);
+}
+
 input[type='color']::-webkit-color-swatch{
   border-radius: 50%;
   cursor: pointer;
@@ -215,25 +243,30 @@ input[type="color" i]{
     border: none;
 }
 
-#color-text{
-    font-size: 14px;
-    padding-right: 10px;
-    color: var(--colorTexto);
-}
-
-#fondo{
-    width: 48%;
-    background-color: var(--colorFondoTerciario);
-    border-radius: 3px;
-    font-size: 14px;
+input[type="color" i]:hover{
+    background-color: var(--colorInputHover);
 }
 
 select{
     border: none;
 }
 
-/*.filtros-img input{
-}*/
+.color-text{
+    font-size: 14px;
+    padding-right: 10px;
+    color: var(--colorTexto);
+}
+
+#fondo-mezcla{
+    width: 48%;
+    background-color: var(--colorFondoTerciario);
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+#fondo-mezcla:hover{
+    background-color: var(--colorInputHover);
+}
 
 #btn-reestablecer{
     width: 70%;
@@ -241,9 +274,13 @@ select{
     font-size: 14px;
     padding: 8px;
     border-radius: 5px;
-    margin-top: 40px;
+    margin-top: 30px;
     color: var(--colorTexto);
     border: none;
+}
+
+#btn-reestablecer:hover{
+    background-color: var(--colorInputHover);
 }
 
 input[type='range'] {
@@ -274,6 +311,10 @@ input[type='range'] {
     color: var(--colorTexto);
     border: none;
     padding: 5px 10px;
+}
+
+.control-text:hover{
+    background-color: var(--colorInputHover);
 }
 
 .font-size{
@@ -307,6 +348,10 @@ input[type='range'] {
     width: 100%;
     border-radius: 3px;
     height: 36px;
+}
+
+.color-input-texto:hover{
+    background-color: var(--colorInputHover);
 }
 
 .fondo-texto{
@@ -344,6 +389,39 @@ input[type='checkbox']{
 
 #texto-interlineado{
     width: 100%;
+}
+
+
+/**************BREAKPOINT min 320 max 700****************/
+
+@media (min-width: 701px) and (max-width: 970px){
+    aside{
+        display: none;
+    }
+
+    .generator{
+        width: 75%;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 700px){
+    aside{
+        display: none;
+    }
+
+    .generator{
+        width: 80%;
+    }   
+}
+
+@media (min-width: 320px) and (max-width: 540px){
+    aside{
+        display: none;
+    }
+
+    .generator{
+        width: 85%;
+    }   
 }
 
 

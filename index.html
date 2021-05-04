@@ -40,7 +40,7 @@
         <main class="central-panel">
           <div class="generator">
               <p class="title-top">TOP TEXT</p>
-              <div class="main-generator"></div>
+              <div class="img-meme"></div>
               <p class="title-bottom">BOTTOM TEXT</p>
           </div>
           <button class="btn-download">
@@ -52,7 +52,7 @@
 
       <!----------------------- ASIDE ---------------------->
 
-      <aside id="paneles" class="displayflex">
+      <aside id="paneles">
 
       <!---------------BOTÓN PARA MOBILE ----------------->
         <button id="btn-salir"><i class="fas fa-times"></i></button>
@@ -63,23 +63,23 @@
          
           <div class="column">
             <h3>URL</h3>
-            <input type="url" class="control-text" />
+            <input type="url" id="url-img" class="control-text" />
           </div>
 
           <div class="column">
             <h3>FONDO</h3>
             <div class="color-list-img">
               <div class="color">
-                <input type="color" value="#FFFFFF"/>
-                <span id="color-text">#FFFFFF</span>
+                <input type="color" id="color-img" value="#FFFFFF"/>
+                <span class="color-text" id="span-fondo-img">#FFFFFF</span>
               </div>
-              <select name="fondo" id="fondo" class="control-text">
-                <option value="">Ninguno</option>
-                <option value="">Aclarar</option>
-                <option value="">Oscurecer</option>
-                <option value="">Diferencia</option>
-                <option value="">Luminosidad</option>
-                <option value="">Multiplicar</option>
+              <select name="fondo" id="fondo-mezcla" class="control-text">
+                <option value="unset">Ninguno</option>
+                <option value="lighten">Aclarar</option>
+                <option value="darken">Oscurecer</option>
+                <option value="difference">Diferencia</option>
+                <option value="luminosity">Luminosidad</option>
+                <option value="multiply">Multiplicar</option>
               </select>
             </div>
           </div>
@@ -88,39 +88,39 @@
             <h3>FILTROS</h3>
             <div class="column">
               <label for="brillo">BRILLO</label>
-              <input type="range" name="brillo" id="" />
+              <input type="range" name="brillo" id="brillo" min="0" max="1" value="1" step="0.1" />
             </div>
             <div class="column">
-              <label for="brillo">OPACIDAD</label>
-              <input type="range" name="opacidad" id="" />
+              <label for="opacidad">OPACIDAD</label>
+              <input type="range" name="opacidad" id="opacidad" min="0" max="1" value="1" step="0.1" />
             </div>
             <div class="column">
-              <label for="brillo">CONTRASTE</label>
-              <input type="range" name="contraste" id="" />
+              <label for="contraste">CONTRASTE</label>
+              <input type="range" name="contraste" id="contraste" min="100" max="1000" value="100" />
             </div>
             <div class="column">
               <label for="desenfoque">DESENFOQUE</label>
-              <input type="range" name="desenfoque" id="" />
+              <input type="range" name="desenfoque" id="desenfoque" min="0" max="10" value="0" step="0.1" />
             </div>
             <div class="column">
               <label for="escala">ESCALA DE GRISES</label>
-              <input type="range" name="escala" id="" />
+              <input type="range" name="escala" id="grises" min="0" max="100" value="0" />
             </div>
             <div class="column">
               <label for="sepia">SEPIA</label>
-              <input type="range" name="sepia" id="" />
+              <input type="range" name="sepia" id="sepia" min="0" max="100" value="0" />
             </div>
             <div class="column">
               <label for="hue">HUE</label>
-              <input type="range" name="hue" id="" />
+              <input type="range" name="hue" id="hue" min="0" max="360" value="0" />
             </div>
             <div class="column">
               <label for="saturado">SATURADO</label>
-              <input type="range" name="saturado" id="" />
+              <input type="range" name="saturado" id="saturado" min="100" max="1000" value="100" step="10" />
             </div>
             <div class="column">
               <label for="negativo">NEGATIVO</label>
-              <input type="range" name="negativo" id="" />
+              <input type="range" name="negativo" id="negativo" min="0" max="1" value="0" step="0.1" />
             </div>
           </div>
          
@@ -190,14 +190,14 @@
                 <h3>COLOR</h3>
                 <div class="color-input-texto">
                   <input type="color" value="#000000" id="color-fuente"/>
-                  <span id="color-text">#000000</span>
+                  <span class="color-text" id="span-color-texto">#000000</span>
                 </div>
               </div>
               <div class="color-list column">
                 <h3>FONDO</h3>
                 <div class="color-input-texto">
                   <input type="color" value="#FFFFFF" id="color-fondo"/>
-                  <span id="color-text">#FFFFFF</span>
+                  <span class="color-text" id="span-fondo-texto">#FFFFFF</span>
                 </div>
               </div>
             </div>
@@ -237,6 +237,12 @@
       </aside>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" 
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" 
+    integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" 
+    crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

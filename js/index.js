@@ -37,6 +37,87 @@ botonTexto.addEventListener("click", ()=>{
 });
 
 
+//FUNCIONALIDADES EN PANEL DE IMAGEN
+
+//AGREGAR URL
+const imgMeme = document.querySelector(".img-meme");
+const imgUrl = document.getElementById("url-img");
+
+imgUrl.addEventListener("input", () =>{
+    const addUrl = imgUrl.value;
+    imgMeme.style.backgroundImage = `url(${addUrl})`;
+});
+
+//COLOR FONDO IMAGEN
+const colorImg = document.getElementById("color-img");
+const spanFondoImg = document.getElementById("span-fondo-img");
+
+colorImg.addEventListener("input", () =>{
+    imgMeme.style.backgroundColor = colorImg.value;
+    spanFondoImg.textContent = colorImg.value;
+});
+
+// MODO DE MEZCLA FONDO IMAGEN
+const modoMezcla = document.getElementById("fondo-mezcla");
+
+modoMezcla.addEventListener("input", () =>{
+    imgMeme.style.backgroundBlendMode = modoMezcla.value;
+});
+
+//FILTROS DE IMAGEN
+const brillo = document.getElementById("brillo");
+const opacidad = document.getElementById("opacidad");
+const contraste = document.getElementById("contraste");
+const desenfoque = document.getElementById("desenfoque");
+const grises = document.getElementById("grises");
+const sepia = document.getElementById("sepia");
+const hue = document.getElementById("hue");
+const saturado = document.getElementById("saturado");
+const negativo = document.getElementById("negativo");
+
+const addFiltros = () =>{
+    imgMeme.style.filter = `brightness(${brillo.value}) 
+    opacity(${opacidad.value}) contrast(${contraste.value}%) 
+    blur(${desenfoque.value}px) grayscale(${grises.value}%) 
+    sepia(${sepia.value}%) hue-rotate(${hue.value}deg) 
+    saturate(${saturado.value}%) invert(${negativo.value})`;
+};
+
+brillo.addEventListener("change", addFiltros);
+opacidad.addEventListener("change", addFiltros);
+contraste.addEventListener("change", addFiltros);
+desenfoque.addEventListener("change", addFiltros);
+grises.addEventListener("change", addFiltros);
+sepia.addEventListener("change", addFiltros);
+hue.addEventListener("change", addFiltros);
+saturado.addEventListener("change", addFiltros);
+negativo.addEventListener("change", addFiltros);
+
+//REESTABLECER FILTROS
+const botonReestablecer = document.getElementById("btn-reestablecer");
+const resetFiltros = () =>{
+    brillo.value = 1; opacidad.value = 1; contraste.value = 100;
+    desenfoque.value = 0; grises.value = 0; sepia.value = 0;
+    hue.value = 0; saturado.value = 100; negativo.value = 0;
+};
+
+botonReestablecer.addEventListener("click", () =>{
+    imgMeme.style.filter = "none";
+    resetFiltros();
+});
+
+//DESCARGAR IMAGEN
+const botonDescargar = document.querySelector(".btn-download");
+const imgContainer = document.querySelector(".generator");
+
+botonDescargar.addEventListener("click", () =>{
+    domtoimage.toBlob(imgContainer)
+        .then(function (blob) {
+        window.saveAs(blob, 'meme.png');
+      });
+});
+
+
 //FUNCIONALIDADES EN PANEL DE TEXTO
 
 //MODIFICAR TOP TEXT
@@ -119,7 +200,6 @@ botonRight.addEventListener("click", () =>{
 });
 
 //CONTORNO DE TEXTO
-
 const botonNinguno = document.getElementById("btn-ninguno");
 const botonClaro = document.getElementById("btn-claro");
 const botonOscuro = document.getElementById("btn-oscuro");
@@ -139,18 +219,21 @@ botonOscuro.addEventListener("click", () =>{
     bottomTitle.style.textShadow = "rgb(0 0 0) 2px 2px, rgb(0 0 0) -2px 2px, rgb(0 0 0) 2px -2px, rgb(0 0 0) -2px -2px";
 });
 
-
 //ESTILO COLOR Y FONDO TEXTOS
 const colorFuente = document.getElementById("color-fuente");
 const colorFondoFuente = document.getElementById("color-fondo");
+const spanColorText = document.getElementById("span-color-texto");
+const spanFondoTexto = document.getElementById("span-fondo-texto");
 
 colorFuente.addEventListener("input", () =>{
     topTitle.style.color = colorFuente.value;
     bottomTitle.style.color = colorFuente.value;
+    spanColorText.textContent = colorFuente.value;
 });
 colorFondoFuente.addEventListener("input", () =>{
     topTitle.style.backgroundColor = colorFondoFuente.value;
     bottomTitle.style.backgroundColor = colorFondoFuente.value;
+    spanFondoTexto.textContent = colorFondoFuente.value;
 });
 
 //FONDO TRANSPARENTE
