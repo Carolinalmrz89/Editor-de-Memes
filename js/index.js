@@ -23,18 +23,41 @@ botonModo.addEventListener("click", () =>{
 });
 
 //CAMBIAR PANEL EN SECTION ASIDE
-const panelAside = document.getElementById("paneles");
 const panelImg = document.getElementById("img-panel");
 const panelTexto = document.getElementById("texto-panel");
+const botonSalirImg = document.getElementById("btn-salir-img");
+const botonSalirTexto = document.getElementById("btn-salir-texto");
+
 
 botonImg.addEventListener("click", ()=>{
-    panelTexto.classList.add("ocultar");
-    panelImg.classList.remove("ocultar");
+    // panelTexto.classList.add("ocultar");
+    panelImg.style.zIndex = "4";
+    panelImg.style.visibility = "visible";
+    panelTexto.style.zIndex = "3";
+    botonSalirImg.style.visibility = "visible";
+    
+    // panelImg.classList.remove("ocultar");
 });
 botonTexto.addEventListener("click", ()=>{
-    panelImg.classList.add("ocultar");
-    panelTexto.classList.remove("ocultar");
+    panelTexto.style.zIndex = "4";
+    panelTexto.style.visibility = "visible";
+    panelImg.style.zIndex = "3";
+    botonSalirTexto.style.visibility = "visible";
+    // panelImg.classList.add("ocultar");
+    // panelTexto.classList.remove("ocultar");
 });
+
+//MOBILE
+//VERSIÓN MOBILE
+const cerrarPaneles = () =>{
+    panelImg.style.zIndex = "0";
+    panelTexto.style.zIndex = "0";
+    panelImg.style.visibility = "hidden";
+    panelTexto.style.visibility = "hidden";
+};
+
+botonSalirImg.addEventListener("click", cerrarPaneles);
+botonSalirTexto.addEventListener("click", cerrarPaneles);
 
 
 //FUNCIONALIDADES EN PANEL DE IMAGEN
@@ -274,9 +297,8 @@ interlineado.addEventListener("input", () =>{
 
 
 
-//VERSIÓN MOBILE
-const mainContariner = document.querySelector(".main");
-const botonSalir = document.getElementById("btn-salir");
+
+
 
 
 
@@ -322,4 +344,3 @@ const botonSalir = document.getElementById("btn-salir");
 
 
 
-//El botonModo tiene que agregar y quitar la clase .claro al contenedor pricipal
