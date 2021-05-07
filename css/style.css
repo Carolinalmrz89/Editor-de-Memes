@@ -200,9 +200,9 @@ p{
 }
 
 #btn-salir-img{
-    background-color: #2A4150;
+    background-color: var(--colorFondoSecundario);
     width: 100%;
-    color: rgb(255, 255, 255);
+    color: var(--colorTexto);
     border: none;
     visibility: hidden;
     display: flex;
@@ -210,9 +210,9 @@ p{
 }
 
 #btn-salir-texto{
-    background-color: #2A4150;
+    background-color: var(--colorFondoSecundario);
     width: 100%;
-    color: rgb(255, 255, 255);
+    color: var(--colorTexto);
     border: none;
     visibility: hidden;
     display: flex;
