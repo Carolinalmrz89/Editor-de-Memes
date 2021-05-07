@@ -124,7 +124,7 @@ nav{
 .generator{
     display: flex;
     width: 40%;
-    height: 85vh;
+    height: 65vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
