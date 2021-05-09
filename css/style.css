@@ -45,7 +45,7 @@ body{
 
 #container{
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     display: flex;
     flex-direction: row;
 }
@@ -63,7 +63,6 @@ button{
 
 .main{
     width:100%;
-    
     background-color: #2E323C;
     z-index: 1;
     position: relative;
@@ -78,7 +77,7 @@ h1{
     width: 100%;
     padding: 12px;
     color: var(--colorTexto);
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 500;
 }
 
@@ -123,8 +122,8 @@ nav{
 
 .generator{
     display: flex;
-    width: 40vw;
-    height: 65vh;
+    width: 35vw;
+    height: 70vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -139,13 +138,13 @@ nav{
 }
 
 p{
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 800;
     color: black;
     width: 100%;
     background-color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 .btn-download{
@@ -512,10 +511,6 @@ input[type='checkbox']{
     .boton-contorno{
         width: 60%;
     }
-   
-
-   
-  
 }
 
 
