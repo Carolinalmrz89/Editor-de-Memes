@@ -452,7 +452,7 @@ input[type='checkbox']{
 
 /**************BREAKPOINT****************/
 
-@media (min-width: 645px) and (max-width: 1020px){
+@media (min-width: 645px) and (max-width: 1024px){
     #img-panel{
         z-index: 0;
         visibility: hidden;
@@ -472,9 +472,14 @@ input[type='checkbox']{
     }
 
     .generator{
-        width: 50vw;
-        height: 60vh;
+        width: 70vw;
+        height: 50vh;
+        margin-top: 50px;
     }  
+
+    .btn-download{
+        margin-top: 25px;
+    }
 }
 
 @media (min-width: 280px) and (max-width: 645px){
@@ -503,13 +508,22 @@ input[type='checkbox']{
     }
 
     .generator{
-        width: 70vw;
+        width: 80vw;
         height: 40vh;
-        margin-top: 40px;
+        margin-top: 50px;
     }  
 
     .boton-contorno{
         width: 60%;
+    }
+
+    p{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-download{
+        margin-top: 20px;
     }
 }
 
