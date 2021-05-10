@@ -224,7 +224,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center; 
-    padding-top: 1.5625em;
+    padding-top: 0.5625em;
     color: var(--colorTexto);
 }
 
@@ -472,13 +472,17 @@ input[type='checkbox']{
     }
 
     .generator{
-        width: 70vw;
-        height: 50vh;
+        width: 60vw;
+        height: 70vh;
         margin-top: 50px;
     }  
 
     .btn-download{
         margin-top: 25px;
+    }
+
+    p{
+        padding: 15px;
     }
 }
 
@@ -496,11 +500,11 @@ input[type='checkbox']{
     }
 
     #btn-salir-img{
-        visibility: hidden;
+        visibility: visible;
     }
 
     #btn-salir-texto{
-        visibility: hidden;
+        visibility: visible;
     }
 
     .main{
@@ -514,7 +518,7 @@ input[type='checkbox']{
     }  
 
     .boton-contorno{
-        width: 60%;
+        width: 65%;
     }
 
     p{

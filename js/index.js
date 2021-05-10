@@ -30,22 +30,17 @@ const botonSalirTexto = document.getElementById("btn-salir-texto");
 
 
 botonImg.addEventListener("click", ()=>{
-    // panelTexto.classList.add("ocultar");
     panelImg.style.zIndex = "4";
     panelImg.style.visibility = "visible";
     panelTexto.style.zIndex = "3";
-    botonSalirImg.style.visibility = "visible";
-    
-    // panelImg.classList.remove("ocultar");
 });
+
 botonTexto.addEventListener("click", ()=>{
     panelTexto.style.zIndex = "4";
     panelTexto.style.visibility = "visible";
     panelImg.style.zIndex = "3";
-    botonSalirTexto.style.visibility = "visible";
-    // panelImg.classList.add("ocultar");
-    // panelTexto.classList.remove("ocultar");
 });
+
 
 //MOBILE
 //VERSIÓN MOBILE
