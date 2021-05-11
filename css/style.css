@@ -236,13 +236,13 @@ h3{
     font-size: 12px;
     color: var(--colorTexto);
 }
-
+/* 
 input{
     background-color: #5B7D86;
     height: 25px;
     border-radius: 5px;
     border: none;
-}
+} */
 
 input:hover{
     background-color: var(--colorInputHover);
@@ -289,7 +289,19 @@ input[type="color" i]:hover{
     background-color: var(--colorInputHover);
 }
 
+ input[type='file']{
+    width: 48%;
+    border-radius: 3px;
+} 
 
+input[type=file]::-webkit-file-upload-button {
+    border: none;
+    border-radius: 3px;
+    background: var(--colorFondoTerciario);
+    color: var(--colorTexto);
+    width: 100%;
+    padding: 5px 0;
+}
 
 select{
     border: none;
@@ -341,10 +353,10 @@ input[type='range'] {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 14px;
-    width: 14px;
+    height: 16px;
+    width: 16px;
     border-radius: 25px;
-    background: #FFFFFF;
+    background: var(--colorFondoPrimario);
     cursor: pointer;
 }
 

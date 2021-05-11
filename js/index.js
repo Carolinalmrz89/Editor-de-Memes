@@ -66,6 +66,18 @@ imgUrl.addEventListener("input", () =>{
     imgMeme.style.backgroundImage = `url(${addUrl})`;
 });
 
+//CARGAR IMAGEN
+const inputFile = document.getElementById("file-img");
+
+inputFile.addEventListener("change", function(){
+    const file = this.files[0];
+    const reader = new FileReader();
+    reader.addEventListener("load", function(){
+        imgMeme.style.backgroundImage = `url(${this.result})`;
+    })
+    reader.readAsDataURL(file); 
+});
+
 //COLOR FONDO IMAGEN
 const colorImg = document.getElementById("color-img");
 const spanFondoImg = document.getElementById("span-fondo-img");
