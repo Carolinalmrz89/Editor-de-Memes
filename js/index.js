@@ -22,12 +22,11 @@ botonModo.addEventListener("click", () =>{
     }
 });
 
-//CAMBIAR PANEL EN SECTION ASIDE
+//CAMBIAR PANEL EN ASIDE
 const panelImg = document.getElementById("img-panel");
 const panelTexto = document.getElementById("texto-panel");
 const botonSalirImg = document.getElementById("btn-salir-img");
 const botonSalirTexto = document.getElementById("btn-salir-texto");
-
 
 botonImg.addEventListener("click", ()=>{
     panelImg.style.zIndex = "4";
@@ -40,19 +39,6 @@ botonTexto.addEventListener("click", ()=>{
     panelTexto.style.visibility = "visible";
     panelImg.style.zIndex = "3";
 });
-
-
-//MOBILE
-//VERSIÓN MOBILE
-const cerrarPaneles = () =>{
-    panelImg.style.zIndex = "0";
-    panelTexto.style.zIndex = "0";
-    panelImg.style.visibility = "hidden";
-    panelTexto.style.visibility = "hidden";
-};
-
-botonSalirImg.addEventListener("click", cerrarPaneles);
-botonSalirTexto.addEventListener("click", cerrarPaneles);
 
 
 //FUNCIONALIDADES EN PANEL DE IMAGEN
@@ -87,7 +73,7 @@ colorImg.addEventListener("input", () =>{
     spanFondoImg.textContent = colorImg.value;
 });
 
-// MODO DE MEZCLA FONDO IMAGEN
+//MODO DE MEZCLA FONDO IMAGEN
 const modoMezcla = document.getElementById("fondo-mezcla");
 
 modoMezcla.addEventListener("input", () =>{
@@ -301,6 +287,19 @@ interlineado.addEventListener("input", () =>{
     topTitle.style.lineHeight = interlineado.value;
     bottomTitle.style.lineHeight = interlineado.value;
 });
+
+
+//MOBILE
+//PANELES DE ASIDE
+const cerrarPaneles = () =>{
+    panelImg.style.zIndex = "0";
+    panelTexto.style.zIndex = "0";
+    panelImg.style.visibility = "hidden";
+    panelTexto.style.visibility = "hidden";
+};
+
+botonSalirImg.addEventListener("click", cerrarPaneles);
+botonSalirTexto.addEventListener("click", cerrarPaneles);
 
 
 
