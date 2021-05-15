@@ -131,6 +131,7 @@ nav {
   height: 100%;
   background-color: black;
   background-size: cover;
+  background-position: center;
 }
 
 p {
@@ -360,6 +361,7 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--colorTexto);
   border: none;
   padding: 5px 10px;
+  outline: none;
 }
 
 .control-text:hover {
@@ -524,5 +526,9 @@ input[type="checkbox"] {
 
   #btn-reestablecer {
     width: 50%;
+  }
+
+  .central-panel{
+    padding: 20px;
   }
 }
