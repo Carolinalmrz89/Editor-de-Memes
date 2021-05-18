@@ -258,16 +258,15 @@ const fondoTransparente = document.getElementById("fondo-transparente");
 fondoTransparente.addEventListener("change", () =>{
     if(fondoTransparente.checked){
         topTitle.style.backgroundColor = 'transparent'; 
+        bottomTitle.style.backgroundColor = 'transparent'; 
+        topTitle.style.position = "absolute";
+        bottomTitle.style.position = "absolute";
+        
     }else{
         topTitle.style.backgroundColor = colorFondoFuente.value;
-    }
-});
-
-fondoTransparente.addEventListener("change", () =>{
-    if(fondoTransparente.checked){
-        bottomTitle.style.backgroundColor = 'transparent'; 
-    }else{
         bottomTitle.style.backgroundColor = colorFondoFuente.value;
+        topTitle.style.position = "static";
+        bottomTitle.style.position = "static";
     }
 });
 
@@ -300,53 +299,4 @@ const cerrarPaneles = () =>{
 
 botonSalirImg.addEventListener("click", cerrarPaneles);
 botonSalirTexto.addEventListener("click", cerrarPaneles);
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
