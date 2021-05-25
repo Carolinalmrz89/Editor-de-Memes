@@ -91,11 +91,16 @@ const saturado = document.getElementById("saturado");
 const negativo = document.getElementById("negativo");
 
 const addFiltros = () => {
-  imgMeme.style.filter = `brightness(${brillo.value}) 
-    opacity(${opacidad.value}) contrast(${contraste.value}%) 
-    blur(${desenfoque.value}px) grayscale(${grises.value}%) 
-    sepia(${sepia.value}%) hue-rotate(${hue.value}deg) 
-    saturate(${saturado.value}%) invert(${negativo.value})`;
+  imgMeme.style.filter = 
+    `brightness(${brillo.value}) 
+     opacity(${opacidad.value}) 
+     contrast(${contraste.value}%) 
+     blur(${desenfoque.value}px) 
+     grayscale(${grises.value}%) 
+     sepia(${sepia.value}%) 
+     hue-rotate(${hue.value}deg) 
+     saturate(${saturado.value}%) 
+     invert(${negativo.value})`;
 };
 
 brillo.addEventListener("change", addFiltros);
@@ -136,6 +141,7 @@ botonDescargar.addEventListener("click", () => {
     window.saveAs(blob, "meme.png");
   });
 });
+
 
 //FUNCIONALIDADES EN PANEL DE TEXTO
 

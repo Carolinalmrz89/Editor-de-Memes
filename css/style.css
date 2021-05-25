@@ -513,7 +513,6 @@ input[type="checkbox"] {
   .generator {
     width: 80vw;
     height: 40vh;
-    margin-top: 50px;
   }
 
   .boton-contorno {
@@ -534,6 +533,6 @@ input[type="checkbox"] {
   }
 
   .central-panel{
-    padding: 20px;
+    padding: 60px 20px;
   }
 }
