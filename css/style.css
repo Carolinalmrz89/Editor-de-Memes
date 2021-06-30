@@ -485,7 +485,24 @@ input[type="checkbox"] {
   }
 }
 
-@media (min-width: 280px) and (max-width: 645px) {
+@media (min-width: 431px) and (max-width: 644px){
+  .central-panel{
+    padding: 60px 20px;
+  }
+
+  .generator {
+    width: 70vw;
+    height: 60vh;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+}
+
+@media (min-width: 280px) and (max-width: 430px) {
   #img-panel {
     width: 100%;
     z-index: 0;
