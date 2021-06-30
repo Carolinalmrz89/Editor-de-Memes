@@ -10,6 +10,8 @@ _____________________________________________________________________________
 
 **Vista previa**
 
+Modo oscuro/Modo claro
+
 <img src="./imgs/img_generador.png" alt="">
 
 
@@ -46,5 +48,5 @@ _____________________________________________________________________________
 ## Recursos:
 * Fuente: Open Sans - https://fonts.google.com/
 * Íconos: https://fontawesome.com/
-* Colores modo claro: e4e3e3, bebdbd, c7c6c6, cacaca, fafafa, black.
-* Colores modo oscuro: 2e323c, 2a4150, 5b7d86, 424652, 7297a1, white.
+* Colores **modo claro**: e4e3e3, bebdbd, c7c6c6, cacaca, fafafa, black.
+* Colores **modo oscuro**: 2e323c, 2a4150, 5b7d86, 424652, 7297a1, white.
