@@ -451,6 +451,8 @@ input[type="checkbox"] {
 
 /**************RESPONSIVE****************/
 
+/*BREAKPOINT min-width: 645px - max-width: 1024px*/
+
 @media (min-width: 645px) and (max-width: 1024px) {
   #img-panel {
     z-index: 0;
@@ -485,6 +487,8 @@ input[type="checkbox"] {
   }
 }
 
+/*BREAKPOINT min-width: 431px - max-width: 644px*/
+
 @media (min-width: 431px) and (max-width: 644px){
   .central-panel{
     padding: 60px 20px;
@@ -501,6 +505,8 @@ input[type="checkbox"] {
   }
 
 }
+
+/*BREAKPOINT min-width: 280px - max-width: 430px*/
 
 @media (min-width: 280px) and (max-width: 430px) {
   #img-panel {
