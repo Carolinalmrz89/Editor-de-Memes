@@ -1,3 +1,4 @@
+// ??? por que agregas esto?
 "use strict";
 
 //CONTAINER
@@ -55,6 +56,8 @@ imgUrl.addEventListener("input", () => {
 const inputFile = document.getElementById("file-img");
 
 inputFile.addEventListener("change", function () {
+  // muy buen agregado esta funcion, pero usa la sintaxis flecha => 
+  // y trata de no usar this. no lo vimos aun, y dudo que lo entiendas
   const file = this.files[0];
   const reader = new FileReader();
   reader.addEventListener("load", function () {
@@ -159,6 +162,7 @@ const textoSuperior = document.getElementById("textoSuperior");
 textoSuperior.addEventListener("change", () => {
   if (textoSuperior.checked) {
     topTitle.classList.add("ocultar");
+    // Si deshabilitas un campo, hay que indicarselo al usuario con un cambio de estilo! 
     topText.disabled = true;
   } else {
     topTitle.classList.remove("ocultar");

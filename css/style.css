@@ -27,9 +27,13 @@ body {
   color: var(--colorTexto);
 }
 
+/* Detalle, pero es mejor importar tus tipografias en HTML, ya que
+hace que la carga de la web sea mas rapida 
+Si importas en CSS de todos modos, esto debe ir arriba de todo */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
 
+/* usas esta clase una sola vez en tu html, te parece necesaria? */
 .displayflex {
   display: flex;
 }
@@ -43,6 +47,7 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+  /* innecesario, es lo que viene por defecto */
   flex-direction: row;
 }
 
@@ -78,6 +83,7 @@ h1 {
 
 nav {
   display: flex;
+  /* innecesario */
   flex-direction: row;
   width: 100%;
   justify-content: center;
@@ -104,6 +110,7 @@ nav {
 }
 
 .central-panel {
+  /* innecesario dar width 100, es lo que viene por defecto */
   width: 100%;
   height: 100%;
   background-color: var(--colorFondoTerciario);
@@ -124,6 +131,7 @@ nav {
 }
 
 .img-meme {
+  /* innecesario */
   width: 100%;
   height: 100%;
   background-color: black;
@@ -194,6 +202,7 @@ p {
   right: 0;
 }
 
+/* si son elementos tan parecidos con #btn-salir-texto, deberian tener la misma clase! */
 #btn-salir-img {
   background-color: var(--colorFondoSecundario);
   width: 100%;
@@ -217,6 +226,7 @@ p {
 /***************PANEL IMAGEN*************/
 
 h2 {
+  /* totalmente innecesario un flex en h2, esto es para elementos que tienen hijos */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,6 +376,7 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--colorTexto);
   border: none;
   padding: 5px 10px;
+  /* nunca, nunca, nunca le sacamos el outline a los elementos de formulario */
   outline: none;
 }
 
