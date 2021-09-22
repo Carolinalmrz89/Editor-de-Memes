@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- El lenguaje nuevamente esta en ingles, como en el primer TP.  Un lector de pantalla trataria de 
+leerla en ingles (va a leer "yiniradour di mims") y buscadores como google van a recomendar esta web a 
+angloparlantes.
+El lang del documento debe coincidir con el lenguaje que usan los usuarios de esta pagina.  --> -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +15,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
- 
+ <!-- las clases y ids siempre se separan con-guiones. Reservamos camelCase para javascript -->
   <body class="modoOscuro">
     <div id="container">
       <div class="main column">
@@ -39,6 +43,8 @@
         <main class="central-panel">
           <div class="generator">
               <p class="title-top">TOP TEXT</p>
+              <!-- aqui se necesita un aria-label para que el usuario de lector de pantalla
+              sepa que aqui se edita el meme -->
               <div class="img-meme"></div>
               <p class="title-bottom">BOTTOM TEXT</p>
           </div>
@@ -60,11 +66,15 @@
           <h2>IMAGEN</h2>
          
           <div class="column">
+            <!-- Esto no es un h3, es un label. Acompaña al input, no presenta una seccion. 
+            Esto afecta negativamente la accesibilidad en tu web 
+          Mismo comentario para el resto de los h3-->
             <h3>URL</h3>
             <input type="url" id="url-img" class="control-text" />
           </div>
           <div class="column">
             <h3>CARGAR IMAGEN</h3>
+            <!-- si no necesita clase, borra el class="" -->
             <input type="file" id="file-img" class="" />
           </div>
 
@@ -143,6 +153,7 @@
           </div>
           <div class="sin-texto-superior">
             <input type="checkbox" name="superior" id="textoSuperior" />
+            <!-- el for deberia ser el id del input -->
             <label for="">Sin texto superior</label>
           </div>
 
@@ -152,6 +163,7 @@
           </div>
           <div class="sin-texto-inferior">
             <input type="checkbox" name="inferior" id="textoInferior"/>
+            <!-- el for deberia ser el id del input -->
             <label for="">Sin texto inferior</label>
           </div>
 
@@ -174,6 +186,8 @@
                   name="Tamaño de fuente" aria-label="Tamaño de fuente" id="tamanio-fuente" min="12" value="35"/>
               </div>
               <div class="font-size">
+                <!-- Aqui hacen falta aria-label, sino el usuario de lector de pantalla
+                no tiene idea que hacen estos botones -->
                 <button class="control-text boton-size" id="btn-left">
                   <i class="fas fa-align-left"></i>
                 </button>
